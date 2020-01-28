@@ -1,0 +1,4 @@
+2020-01-28-08:53  glen e. p. ropella  <gepr@tempusdictum.com>
+
+	* run.sh (CLASSPATH): Bump MASON from 18 to 20.
+

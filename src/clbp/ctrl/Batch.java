@@ -12,7 +12,6 @@ package clbp.ctrl;
 import clbp.view.ObsVar;
 
 public class Batch {
-  public static int MODEL_ORDER = 10;
   long seed = -Integer.MAX_VALUE;
   Parameters params = null;
   public sim.engine.SimState state = null;
@@ -47,9 +46,9 @@ public class Batch {
     model.init(state, params.model.get("timeLimit").doubleValue(), params.model.get("cyclePerTime").doubleValue());
     model.instantiate();
     // schedule the components
-    model.comps.forEach((c) -> { state.schedule.scheduleOnce(c,MODEL_ORDER); });
+    model.comps.forEach((c) -> { state.schedule.scheduleOnce(c,clbp.model.Model.MODEL_ORDER); });
     // schedule the model
-    state.schedule.scheduleOnce(model,MODEL_ORDER);
+    state.schedule.scheduleOnce(model,clbp.model.Model.MODEL_ORDER);
         
     // schedule an observer
     ObsVar ov = new ObsVar(expName, p);

@@ -12,7 +12,8 @@ package clbp.model;
 import java.util.ArrayList;
 
 public class Model implements sim.engine.Steppable {
-  public static int SUB_ORDER = clbp.ctrl.Batch.MODEL_ORDER+1;
+  public static int MODEL_ORDER = 10;
+  public static int SUB_ORDER = MODEL_ORDER+1;
   public ec.util.MersenneTwisterFast pRNG = null;
   public boolean finished = false;
   clbp.ctrl.Parameters params = null;
@@ -47,7 +48,7 @@ public class Model implements sim.engine.Steppable {
   public void step(sim.engine.SimState state) {
     
     if (state.schedule.getTime() < timeLimit*cyclePerTime )
-      state.schedule.scheduleOnce(this, clbp.ctrl.Batch.MODEL_ORDER);
+      state.schedule.scheduleOnce(this, MODEL_ORDER);
     else {
       finished = true;
       for (Comp c : comps) c.finished = true;

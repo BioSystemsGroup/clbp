@@ -10,7 +10,7 @@
 package clbp.view;
 
 public abstract class Obs implements sim.engine.Steppable {
-  public static int VIEW_ORDER = 20;
+  public static int VIEW_ORDER = clbp.model.Model.MODEL_ORDER+10;
   clbp.model.Model subject = null;
   String expName = null;
   java.io.PrintWriter outFile = null;
