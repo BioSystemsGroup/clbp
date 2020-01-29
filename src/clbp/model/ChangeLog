@@ -1,0 +1,5 @@
+2020-01-28-18:00  glen e. p. ropella  <gepr@tempusdictum.com>
+
+	* Model.java (Steppable): Write each component to a JSON file at the end.
+	* Comp.java (variables): Change from MutableDouble to Double to make JSON files more palatable.
+

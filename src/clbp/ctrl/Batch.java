@@ -9,7 +9,7 @@
  */
 package clbp.ctrl;
 
-import clbp.view.ObsVar;
+import clbp.view.ObsComps;
 
 public class Batch {
   long seed = -Integer.MAX_VALUE;
@@ -51,9 +51,9 @@ public class Batch {
     state.schedule.scheduleOnce(model,clbp.model.Model.MODEL_ORDER);
         
     // schedule an observer
-    ObsVar ov = new ObsVar(expName, p);
-    ov.init(dir, model);
-    state.schedule.scheduleOnce(ov,clbp.view.Obs.VIEW_ORDER);
+    ObsComps oc = new ObsComps(expName, p);
+    oc.init(dir, model);
+    state.schedule.scheduleOnce(oc,clbp.view.Obs.VIEW_ORDER);
   }
   
   public void go() {
@@ -98,11 +98,27 @@ public class Batch {
               + java.io.File.separator 
               + "parameters-" + clbp.Main.MAJOR_VERSION + "-" + System.currentTimeMillis()+".json"));
       p.version = clbp.Main.MAJOR_VERSION+" Subversion"+clbp.Main.MINOR_VERSION;
-      fw.write(p.describe());
+      fw.write(describe(p));
       fw.close();
     } catch (java.io.IOException ioe) {
       System.exit(-1);
     }
+  }
+  public static void writeToFile(String fileName, String thingToWrite) {
+    try {
+      java.io.FileWriter fw = new java.io.FileWriter(new java.io.File(out_dir_name 
+              + java.io.File.separator 
+              + fileName+".json"));
+      fw.write(thingToWrite);
+      fw.close();
+    } catch (java.io.IOException ioe) {
+      System.exit(-1);
+    }
+  }
+  public static String describe(Object o) {
+    com.owlike.genson.Genson g = new com.owlike.genson.Genson();
+    String json = g.serialize(o);
+    return json;
   }
   
   public double getMaxCycle() {

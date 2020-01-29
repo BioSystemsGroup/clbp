@@ -9,11 +9,16 @@
  */
 package clbp.view;
 
+import clbp.model.Comp;
+
+import java.util.Map;
+import java.util.ArrayList;
+
 public abstract class Obs implements sim.engine.Steppable {
   public static int VIEW_ORDER = clbp.model.Model.MODEL_ORDER+10;
   clbp.model.Model subject = null;
   String expName = null;
-  java.io.PrintWriter outFile = null;
+  String fileNamePrefix = null;
   clbp.ctrl.Parameters params = null;
 
   public Obs(String en, clbp.ctrl.Parameters p) {
@@ -29,38 +34,17 @@ public abstract class Obs implements sim.engine.Steppable {
     // setup the output file
     if (dir != null && dir.exists()) {
       try {
-        String fileName = dir.getCanonicalPath() + java.io.File.separator
+        fileNamePrefix = dir.getCanonicalPath() + java.io.File.separator
                 + clbp.ctrl.Batch.expName + "-"
-                + m.getClass().getSimpleName() + "-"
-                + this.getClass().getSimpleName()
-                + ".csv";
-        outFile = new java.io.PrintWriter(new java.io.File(fileName));
-      } catch (java.io.IOException ioe) { throw new RuntimeException(ioe); }
+                + m.getClass().getSimpleName();
+      } catch (java.io.IOException ioe) {throw new RuntimeException("Trouble finding the path of the output directory: "+fileNamePrefix, ioe);}
     }
     
-    writeHeader();
   }
 
-  public void writeHeader() {
-    StringBuilder sb = new StringBuilder("Time");
-    subject.comps.stream().forEach((c) -> {
-      sb.append(", Comp").append(c.id);
-    });
-    outFile.println(sb.toString());
-  }
-
-  public abstract java.util.ArrayList<Double> measure();
+  public abstract void writeHeaders();
+  public abstract Map<Comp, ArrayList<Double>> measure();
   
   @Override
-  public void step(sim.engine.SimState state) {
-    java.util.ArrayList<Double> data = measure();
-    double t = state.schedule.getTime()/subject.cyclePerTime;
-    StringBuilder sb = new StringBuilder(Double.toString(t));
-    data.stream().forEach((v) -> { sb.append(", ").append(v); });
-    outFile.println(sb.toString()); outFile.flush();
-
-    if (!subject.finished) {
-      state.schedule.scheduleOnce(this, VIEW_ORDER);
-    }
-  }
+  public abstract void step(sim.engine.SimState state);
 }

@@ -1,3 +1,9 @@
+2020-01-28-17:58  glen e. p. ropella  <gepr@tempusdictum.com>
+
+	* Batch, Parameters (describe()): Moved from Parameters to Batch.
+	* Batch.java (writeToFile()): Convenience method for writing any object to a JSON file.
+	* Batch.java: Refactor observations to work over all components, not one per Obs instance.
+
 2020-01-28-08:54  glen e. p. ropella  <gepr@tempusdictum.com>
 
 	* Batch, Model, Obs ([MODEL|SUB|VIEW]_ORDER): Move MODEL_ORDER from Batch to Model. Change VIEW_ORDER from constant 20 to MODE_ORDER+10.

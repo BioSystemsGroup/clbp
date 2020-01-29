@@ -18,7 +18,7 @@ public class Main {
     clbp.ctrl.GUI gui = null;
 
     if (keyExists("-epf",args)) {
-      System.out.println(new clbp.ctrl.Parameters().describe());
+      System.out.println("Error!");
       System.exit(-1);
     }
     // run with custom parameters?

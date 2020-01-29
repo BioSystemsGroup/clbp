@@ -12,7 +12,7 @@ package clbp.model;
 import java.util.ArrayList;
 
 public class Model implements sim.engine.Steppable {
-  public static int MODEL_ORDER = 10;
+  public static final int MODEL_ORDER = 10;
   public static int SUB_ORDER = MODEL_ORDER+1;
   public ec.util.MersenneTwisterFast pRNG = null;
   public boolean finished = false;
@@ -51,7 +51,10 @@ public class Model implements sim.engine.Steppable {
       state.schedule.scheduleOnce(this, MODEL_ORDER);
     else {
       finished = true;
-      for (Comp c : comps) c.finished = true;
+      comps.forEach((c) -> { 
+        c.finished = true; 
+        clbp.ctrl.Batch.writeToFile(c.getClass().getSimpleName()+"-"+c.id, clbp.ctrl.Batch.describe(c));
+      });
     }
   }
 }
