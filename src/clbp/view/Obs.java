@@ -18,7 +18,7 @@ public abstract class Obs implements sim.engine.Steppable {
   public static int VIEW_ORDER = clbp.model.Model.MODEL_ORDER+10;
   clbp.model.Model subject = null;
   String expName = null;
-  String fileNamePrefix = null;
+  java.io.File out_dir = null;
   clbp.ctrl.Parameters params = null;
 
   public Obs(String en, clbp.ctrl.Parameters p) {
@@ -28,18 +28,9 @@ public abstract class Obs implements sim.engine.Steppable {
   }
   
   public void init(java.io.File dir, clbp.model.Model m) {
+    out_dir = dir;
     if (m != null) subject = m;
     else throw new RuntimeException("Subject to Observe cannot be null.");
-    
-    // setup the output file
-    if (dir != null && dir.exists()) {
-      try {
-        fileNamePrefix = dir.getCanonicalPath() + java.io.File.separator
-                + clbp.ctrl.Batch.expName + "-"
-                + m.getClass().getSimpleName();
-      } catch (java.io.IOException ioe) {throw new RuntimeException("Trouble finding the path of the output directory: "+fileNamePrefix, ioe);}
-    }
-    
   }
 
   public abstract void writeHeaders();

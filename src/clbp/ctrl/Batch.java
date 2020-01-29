@@ -17,20 +17,22 @@ public class Batch {
   Parameters params = null;
   public sim.engine.SimState state = null;
   public static String expName = "notset";
+  private static String out_dir_prefix = null;
   private static String out_dir_name = null;
   static java.io.File dir = null;
   clbp.model.Model model = null;
   String paramString;
   
-  public Batch(String en, java.io.File pf) throws FileNotFoundException {
+  public Batch(String en, String odp, java.io.File pf) throws FileNotFoundException {
     if (en != null && !en.equals("")) expName = en;
     else throw new RuntimeException("Experiment name cannot be null or empty.");
+    out_dir_prefix = odp;
     java.io.FileInputStream pfis = new java.io.FileInputStream(pf);
     paramString = new java.util.Scanner(pfis).useDelimiter("\\A").next();
     state = new sim.engine.SimState(System.currentTimeMillis());
   }
   public final void load() {
-    out_dir_name = setupOutput(expName);
+    out_dir_name = setupOutput(expName, out_dir_prefix);
     clbp.ctrl.Parameters p = clbp.ctrl.Parameters.readOneOfYou(paramString);
     params = p;
     Number seed_n = params.batch.get("seed");
@@ -71,25 +73,25 @@ public class Batch {
   private static java.io.PrintWriter log = null;
   public static void log(String entry) { log.println(entry); log.flush(); }
   
-  static String setupOutput(String en) {
+  static String setupOutput(String en, String odp) {
     final String DATE_FORMAT = "yyyy-MM-dd-HHmmss";
     final java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat(DATE_FORMAT);
     StringBuffer date_s = new StringBuffer("");
     sdf.format(new java.util.Date(System.currentTimeMillis()), date_s,
             new java.text.FieldPosition(0));
-    String dirName = date_s.toString();
+    String dirName = odp+java.io.File.separator+en+"-"+date_s.toString();
 
     // create a directory using the current date and time
     dir = new java.io.File(dirName);
-    if (!dir.exists()) dir.mkdir();
+    if (!dir.exists()) dir.mkdirs();
     
     // initialize the output for run-time messages
     try {
       log = new java.io.PrintWriter(new java.io.File(dirName
-              + java.io.File.separator + en + "-output.txt"));
+              + java.io.File.separator + "output.txt"));
     } catch (java.io.FileNotFoundException fnfe) {
       throw new RuntimeException("Couldn't open " + dirName
-              + java.io.File.separator + en + ".txt", fnfe);
+              + java.io.File.separator + "output.txt", fnfe);
     }
     return dirName;
   }

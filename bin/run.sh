@@ -14,6 +14,7 @@ CLASSPATH=$CLASSPATH:./lib/logback-core-0.9.28.jar
 #CLASSPATH=$CLASSPATH:./lib/mason-18-with-src.jar
 CLASSPATH=$CLASSPATH:./lib/mason20-with-src.jar
 CLASSPATH=$CLASSPATH:./lib/slf4j-api-1.6.1.jar
+CLASSPATH=$CLASSPATH:./lib/commons-io-2.6.jar
 export CLASSPATH
 
 time java -Duser.language=US -Duser.country=US clbp.Main $*

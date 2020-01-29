@@ -1,3 +1,7 @@
+2020-01-29-12:29  glen e. p. ropella  <gepr@tempusdictum.com>
+
+	* Main.java (Main): Add parameter "-od" for writing output to a differnt directory.
+
 2020-01-29-11:37  glen e. p. ropella  <gepr@tempusdictum.com>
 
 	* Main.java (main()): Generalize IO handling.

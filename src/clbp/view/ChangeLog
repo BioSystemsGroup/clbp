@@ -1,3 +1,7 @@
+2020-01-29-12:30  glen e. p. ropella  <gepr@tempusdictum.com>
+
+	* Obs[Comps].java: Allow output to a different directory.
+
 2020-01-28-18:00  glen e. p. ropella  <gepr@tempusdictum.com>
 
 	* Obs[Comps].java (Steppable): Refactor to observe all components.

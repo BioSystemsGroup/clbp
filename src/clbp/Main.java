@@ -21,7 +21,10 @@ public class Main {
       System.out.println("Error!");
       System.exit(-1);
     }
-    // run with custom parameters?
+    /**
+     * Parameter handling
+     */
+    java.io.File cur_dir = new java.io.File("");
     java.io.File pd = null;
     String pd_name = null;
     String exp_name = null;
@@ -32,17 +35,28 @@ public class Main {
       pd = new java.io.File(pd_name);
       exp_name = pd.getName();
     } else {
-      pd = new java.io.File("");
+      pd = cur_dir;
       pd_name = pd.getAbsolutePath()+java.io.File.separator+"cfg";
       exp_name = "cfg";
     }
     pf_name = pd_name+java.io.File.separator+"parameters.json";
     pf = new java.io.File(pf_name);
     if (!pf.exists()) throw new RuntimeException("Could not find default parameters file in "+pf_name);
-    String expName = null;
+    
+    /**
+     * Output handling
+     */
+    String out_dir_name = null;
+    if (keyExists("-od", args)) {
+      out_dir_name = argumentForKey("-od", args, 0);
+    } else {
+      // use child directory
+      out_dir_name = cur_dir.getAbsolutePath();
+    }
+    
     clbp.ctrl.Batch b = null;
     try {
-      b = new clbp.ctrl.Batch(exp_name, pf);
+      b = new clbp.ctrl.Batch(exp_name, out_dir_name, pf);
     } catch (java.io.FileNotFoundException fnfe) {throw new RuntimeException("Couldn't launch Batch.",fnfe); }
     
     if (useGUI) {

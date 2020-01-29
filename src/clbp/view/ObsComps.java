@@ -25,7 +25,7 @@ public class ObsComps extends Obs {
   public void init(java.io.File dir, clbp.model.Model m) {
     super.init(dir,m);
     for (Comp c : subject.comps) {
-      String fileName = fileNamePrefix + "-Comp:"+c.id+".csv";
+      String fileName = out_dir.getAbsolutePath() + java.io.File.separator + "Comp-"+c.id+".csv";
       try {
          PrintWriter outFile = new PrintWriter(new java.io.File(fileName));
          outFiles.put(c,outFile);
