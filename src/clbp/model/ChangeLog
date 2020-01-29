@@ -1,3 +1,8 @@
+2020-01-29-11:40  glen e. p. ropella  <gepr@tempusdictum.com>
+
+	* Model.java (instantiate()): Read Comps instead of hard-coded construction.
+	* Comp.java: Add default constructor for reading JSON objects.
+
 2020-01-28-18:00  glen e. p. ropella  <gepr@tempusdictum.com>
 
 	* Model.java (Steppable): Write each component to a JSON file at the end.

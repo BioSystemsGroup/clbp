@@ -1,3 +1,7 @@
+2020-01-29-11:38  glen e. p. ropella  <gepr@tempusdictum.com>
+
+	* Batch.java (fileMap, readNext(), listFiles()): Generalize IO handling.
+
 2020-01-28-17:58  glen e. p. ropella  <gepr@tempusdictum.com>
 
 	* Batch, Parameters (describe()): Moved from Parameters to Batch.

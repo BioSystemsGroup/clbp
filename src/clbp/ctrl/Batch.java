@@ -10,6 +10,7 @@
 package clbp.ctrl;
 
 import clbp.view.ObsComps;
+import java.io.FileNotFoundException;
 
 public class Batch {
   long seed = -Integer.MAX_VALUE;
@@ -21,10 +22,11 @@ public class Batch {
   clbp.model.Model model = null;
   String paramString;
   
-  public Batch(String en, java.io.InputStream pf) {
+  public Batch(String en, java.io.File pf) throws FileNotFoundException {
     if (en != null && !en.equals("")) expName = en;
     else throw new RuntimeException("Experiment name cannot be null or empty.");
-    paramString = new java.util.Scanner(pf).useDelimiter("\\A").next();
+    java.io.FileInputStream pfis = new java.io.FileInputStream(pf);
+    paramString = new java.util.Scanner(pfis).useDelimiter("\\A").next();
     state = new sim.engine.SimState(System.currentTimeMillis());
   }
   public final void load() {
@@ -123,5 +125,36 @@ public class Batch {
   
   public double getMaxCycle() {
     return Math.max(model.timeLimit*model.cyclePerTime, model.timeLimit*model.cyclePerTime);
+  }
+
+  /**
+   * Utilities
+   **/  
+  private static java.util.Map<Class,java.util.Collection<java.io.File>> fileMap = new java.util.HashMap<Class,java.util.Collection<java.io.File>>();
+  public static Object readNext(Class aClass) {
+    com.owlike.genson.Genson g = new com.owlike.genson.Genson();
+    java.util.Collection<java.io.File> files = null;
+    if (!fileMap.containsKey(aClass)) {
+      String in_dir_name = new java.io.File("").getAbsolutePath()+java.io.File.separator+"cfg";
+      files = listFiles(in_dir_name, aClass.getSimpleName()+"-*.json");
+      fileMap.put(aClass, files);
+    } else {
+      files = fileMap.get(aClass);
+    }
+    java.io.File nextFile = files.stream().findFirst().get();
+    files.remove(nextFile);
+    String json = null;
+    try {
+      json = new java.util.Scanner(nextFile).useDelimiter("\\A").next();
+    } catch(java.io.FileNotFoundException fnfe) { throw new RuntimeException("Cannot open "+nextFile.getPath(),fnfe); }
+    System.out.println("Deserializing\n"+json);
+    Object o = g.deserialize(json, aClass);
+    if (o == null) throw new RuntimeException("Problem loading "+aClass.getSimpleName()+".");
+    return o;
+  }
+  private static java.util.Collection<java.io.File> listFiles(String dir, String pattern) {
+    java.io.File directory = new java.io.File(dir);
+    return org.apache.commons.io.FileUtils.listFiles(directory, 
+            new org.apache.commons.io.filefilter.WildcardFileFilter(pattern), null); // null = case sensitive
   }
 }

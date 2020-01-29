@@ -10,8 +10,8 @@
 package clbp;
 
 public class Main {
-  public static final String MAJOR_VERSION = "TUT-v0.8";
-  public static final String MINOR_VERSION = "$Revision: 787 $";
+  public static final String MAJOR_VERSION = "CLBP-v0.0";
+  public static final String MINOR_VERSION = "$Revision: 3 $";
   public static void main(String[] args) {
     // run the GUI?
     boolean useGUI = keyExists("-gui",args);
@@ -22,22 +22,28 @@ public class Main {
       System.exit(-1);
     }
     // run with custom parameters?
-    java.io.InputStream pf = null;
-    String fileName = "/parameters.json";
-    if (keyExists("-pf",args)) {
-      fileName = argumentForKey("-pf", args, 0);
-      try {
-        pf = new java.io.FileInputStream(new java.io.File(fileName));
-      } catch (java.io.FileNotFoundException fnfe) { 
-        throw new RuntimeException(fnfe);
-      }
+    java.io.File pd = null;
+    String pd_name = null;
+    String exp_name = null;
+    String pf_name = null;
+    java.io.File pf = null;
+    if (keyExists("-pd",args)) {
+      pd_name = argumentForKey("-pd", args, 0);
+      pd = new java.io.File(pd_name);
+      exp_name = pd.getName();
     } else {
-      pf = Main.class.getResourceAsStream(fileName);
-      if (pf == null) throw new RuntimeException("Could not find default parameters file in CLASSPATH.");
+      pd = new java.io.File("");
+      pd_name = pd.getAbsolutePath()+java.io.File.separator+"cfg";
+      exp_name = "cfg";
     }
+    pf_name = pd_name+java.io.File.separator+"parameters.json";
+    pf = new java.io.File(pf_name);
+    if (!pf.exists()) throw new RuntimeException("Could not find default parameters file in "+pf_name);
     String expName = null;
-    if (fileName != null && !fileName.equals("")) expName = fileName.substring(fileName.lastIndexOf('/'),fileName.indexOf(".json"));
-    clbp.ctrl.Batch b = new clbp.ctrl.Batch(expName, pf);
+    clbp.ctrl.Batch b = null;
+    try {
+      b = new clbp.ctrl.Batch(exp_name, pf);
+    } catch (java.io.FileNotFoundException fnfe) {throw new RuntimeException("Couldn't launch Batch.",fnfe); }
     
     if (useGUI) {
       gui = new clbp.ctrl.GUI(b);

@@ -1,0 +1,5 @@
+2020-01-29-11:36  glen e. p. ropella  <gepr@tempusdictum.com>
+
+	* Comp-0.json: New parameter file allowing one to specify the components in JSON.
+	
+

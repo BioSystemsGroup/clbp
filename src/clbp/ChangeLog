@@ -1,0 +1,4 @@
+2020-01-29-11:37  glen e. p. ropella  <gepr@tempusdictum.com>
+
+	* Main.java (main()): Generalize IO handling.
+

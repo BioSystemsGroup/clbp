@@ -55,7 +55,7 @@ public class ObsComps extends Obs {
     subject.comps.stream().forEach((c) -> {
       ArrayList<Double> perCompResults = new ArrayList<>();
       for (Map.Entry<String,Double> me : c.variables.entrySet()) {
-        double result = c.variables.get("Variable1").doubleValue();
+        double result = me.getValue();
         perCompResults.add(result);
       }
       retVal.put(c, perCompResults);

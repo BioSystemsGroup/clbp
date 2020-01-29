@@ -31,7 +31,9 @@ public class Model implements sim.engine.Steppable {
 
   public void instantiate() {
     java.util.ArrayList<Comp> tmpComps = new java.util.ArrayList<>(2);
-    Comp comp = new Comp(0, 0.0);
+    Comp comp = null;
+    Object o = clbp.ctrl.Batch.readNext(Comp.class);
+    if (o instanceof Comp) comp = (Comp)o;
     tmpComps.add(comp);
     comps = tmpComps;
   };
