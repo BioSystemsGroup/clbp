@@ -133,7 +133,7 @@ public class Batch {
    * Utilities
    **/  
   private static java.util.Map<Class,java.util.Collection<java.io.File>> fileMap = new java.util.HashMap<Class,java.util.Collection<java.io.File>>();
-  public static Object readNext(Class aClass) {
+  public static Object readNext(Class aClass) throws java.util.NoSuchElementException {
     com.owlike.genson.Genson g = new com.owlike.genson.Genson();
     java.util.Collection<java.io.File> files = null;
     if (!fileMap.containsKey(aClass)) {
@@ -149,7 +149,6 @@ public class Batch {
     try {
       json = new java.util.Scanner(nextFile).useDelimiter("\\A").next();
     } catch(java.io.FileNotFoundException fnfe) { throw new RuntimeException("Cannot open "+nextFile.getPath(),fnfe); }
-    System.out.println("Deserializing\n"+json);
     Object o = g.deserialize(json, aClass);
     if (o == null) throw new RuntimeException("Problem loading "+aClass.getSimpleName()+".");
     return o;

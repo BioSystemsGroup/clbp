@@ -25,7 +25,7 @@ public class ObsComps extends Obs {
   public void init(java.io.File dir, clbp.model.Model m) {
     super.init(dir,m);
     for (Comp c : subject.comps) {
-      String fileName = out_dir.getAbsolutePath() + java.io.File.separator + "Comp-"+c.id+".csv";
+      String fileName = out_dir.getAbsolutePath() + java.io.File.separator + c.getClass().getSimpleName()+"-"+c.getName()+".csv";
       try {
          PrintWriter outFile = new PrintWriter(new java.io.File(fileName));
          outFiles.put(c,outFile);
@@ -44,7 +44,6 @@ public class ObsComps extends Obs {
       for (Map.Entry<String,Double> me : c.variables.entrySet()) {
         sb.append(", ").append(me.getKey());
       }
-      System.out.println(outFiles.get(c));
       outFiles.get(c).println(sb.toString());
     });
   }

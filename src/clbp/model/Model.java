@@ -32,10 +32,15 @@ public class Model implements sim.engine.Steppable {
   public void instantiate() {
     java.util.ArrayList<Comp> tmpComps = new java.util.ArrayList<>(2);
     Comp comp = null;
-    Object o = clbp.ctrl.Batch.readNext(Comp.class);
-    if (o instanceof Comp) comp = (Comp)o;
-    tmpComps.add(comp);
+    Object o = null;
+    while(true) {
+      try { o = clbp.ctrl.Batch.readNext(Comp.class); }
+      catch (java.util.NoSuchElementException nsee) { break; }
+      if (o instanceof Comp) comp = (Comp)o;
+      tmpComps.add(comp);
+    }
     comps = tmpComps;
+    clbp.ctrl.Batch.log("Read "+comps.size()+" components.");
   };
   
   public void init(sim.engine.SimState state, double tl, double cpt) {
@@ -55,7 +60,7 @@ public class Model implements sim.engine.Steppable {
       finished = true;
       comps.forEach((c) -> { 
         c.finished = true; 
-        clbp.ctrl.Batch.writeToFile(c.getClass().getSimpleName()+"-"+c.id, clbp.ctrl.Batch.describe(c));
+        clbp.ctrl.Batch.writeToFile(c.getClass().getSimpleName()+"-"+c.getName(), clbp.ctrl.Batch.describe(c));
       });
     }
   }
