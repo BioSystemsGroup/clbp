@@ -1,7 +1,7 @@
 {"finished": false,
   "id": 0,
   "name": "Environment",
-  "assignments":["x20 = x0 + x1^x2","x21 = x20 * x3"],
+  "assignments":["personality = age + bmi^sex","pain_beliefs = personality * smoking"],
   "variables": {
     "age": 10.0,
     "bmi": 1.5,

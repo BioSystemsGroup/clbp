@@ -33,8 +33,6 @@ public class Comp implements sim.engine.Steppable {
   
   @Override
   public void step(sim.engine.SimState state) {
-    Double[] var_arr = variables.values().toArray(new Double[0]);
-    String[] key_arr = variables.keySet().toArray(new String[0]);
     ArrayList<String> lhs = new ArrayList<>();
     ArrayList<String> rhs = new ArrayList<>();
     for (String a : assignments) {
@@ -44,12 +42,12 @@ public class Comp implements sim.engine.Steppable {
     }
     for (int andx=0 ; andx<assignments.size() ; andx++) {
       String script_bound = rhs.get(andx);
-      int lhsndx = Integer.parseInt(lhs.get(andx).replaceFirst("x", "").trim());
-      for (int rhsndx=var_arr.length-1 ; rhsndx>=0 ; rhsndx--) {
-        script_bound = script_bound.replaceAll("x"+rhsndx, var_arr[rhsndx].toString());
+      String lhskey = lhs.get(andx).trim();
+      for (java.util.Map.Entry<String,Double> me : variables.entrySet()) {
+        script_bound = script_bound.replaceAll(me.getKey(), me.getValue().toString());
       }
       double result = clbp.util.Eval.eval(script_bound);
-      variables.replace(key_arr[lhsndx], result);
+      variables.replace(lhskey, result);
     }
     if (!finished)
       state.schedule.scheduleOnce(this,clbp.model.Model.SUB_ORDER);
