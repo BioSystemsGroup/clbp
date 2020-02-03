@@ -17,6 +17,7 @@ CLASSPATH=$CLASSPATH:./lib/slf4j-api-1.6.1.jar
 CLASSPATH=$CLASSPATH:./lib/commons-io-2.6.jar
 export CLASSPATH
 
-time java -Duser.language=US -Duser.country=US clbp.Main $*
+#time java -Duser.language=US -Duser.country=US clbp.Main $*
+time /usr/local/graalvm-ce-java11-19.3.1/bin/java clbp.Main $*
 exit 0
 

@@ -33,7 +33,7 @@ public class Parameters {
   private boolean test(String name, Map<String,Number> ref, Map<String,Number> map) {
     java.util.Optional<Map.Entry<String, Number>> broken = ref.entrySet().stream().filter(me -> map.get(me.getKey()) == null).findAny();
     if (broken.isPresent())
-      clbp.ctrl.Batch.log(name+"."+broken.get().getKey()+" not found in parameter file.");
+      clbp.ctrl.Batch.logln(name+"."+broken.get().getKey()+" not found in parameter file.");
     return broken.isPresent();
   }
   private boolean test() {

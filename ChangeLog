@@ -1,0 +1,4 @@
+2020-02-03-12:18  glen e. p. ropella  <gepr@tempusdictum.com>
+
+	* project.properties (includes): Change Java Platform to GraalVM in order to execute more generic mathematics (via FastR).
+

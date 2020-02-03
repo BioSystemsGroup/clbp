@@ -1,3 +1,12 @@
+2020-02-03-12:27  glen e. p. ropella  <gepr@tempusdictum.com>
+
+	* Model.java (instantiate()): Set Comp.callback.
+	(env): Devine the Environment component. This is the only hard-coded name pairing the Java with the JSON.
+	* Comp.java (callback): Add a callback hook to the parent Model in order to access the Environment component.
+	(readnonLHS(), writeLHS()): New methods to read the RHS (well all non-LHS) variables from the environment and write the LHS variables to the environment. This implicitly "wires up" the components based on the variables in the assignment expressions.
+	([rl]hs, parse()): Promote LHS and RHS sides of the assignments so we only parse the math once.
+	(step()): Use the Graal FastR eval instead of the simple one implemented in Eval.
+
 2020-01-31-16:17  glen e. p. ropella  <gepr@tempusdictum.com>
 
 	* Comp.java: Change from indexed variables to variable keys for expression replacement.

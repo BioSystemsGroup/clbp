@@ -19,6 +19,7 @@ public class Model implements sim.engine.Steppable {
   clbp.ctrl.Parameters params = null;
   public double timeLimit = Double.NaN;
   public double cyclePerTime = Double.NaN;
+  Comp env = null;
   
   /**
    * comps allows us to decouple the Observer from the specific Model
@@ -37,10 +38,16 @@ public class Model implements sim.engine.Steppable {
       try { o = clbp.ctrl.Batch.readNext(Comp.class); }
       catch (java.util.NoSuchElementException nsee) { break; }
       if (o instanceof Comp) comp = (Comp)o;
+      else throw new RuntimeException("Object "+o+" is not an instance of Comp");
+      comp.parse();
+      comp.setCallback(this);
+      // identify the Environment as the Model's blackboard
+      if (comp.name.equalsIgnoreCase("Environment")) env = comp;
       tmpComps.add(comp);
     }
     comps = tmpComps;
-    clbp.ctrl.Batch.log("Read "+comps.size()+" components.");
+    clbp.ctrl.Batch.logln("Read "+comps.size()+" components.");
+    if (env == null) throw new RuntimeException("No Environment component was read.");
   };
   
   public void init(sim.engine.SimState state, double tl, double cpt) {

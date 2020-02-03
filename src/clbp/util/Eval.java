@@ -9,12 +9,22 @@
  */
 package clbp.util;
 
-public class Eval {
+import org.graalvm.polyglot.Context;
 
+public class Eval {
+   public static Context graal = null;
+   public static void initGraal() {
+//   try {
+     graal = Context.newBuilder().allowAllAccess(true).build();
+     java.util.Set<String> languages = graal.getEngine().getLanguages().keySet();
+     System.out.println("Current Languages available in GraalVM: " + languages);
+//   }
+   }
+   
   /**
    * Stolen from: https://stackoverflow.com/questions/3422673/how-to-evaluate-a-math-expression-given-in-string-form/26227947#26227947
    */
-  public static double eval(final String str) {
+  public static double oldeval(final String str) {
     return new Object() {
       int pos = -1, ch;
 
@@ -121,6 +131,6 @@ public class Eval {
   public static void main(String[] args) {
     double[] values = {4,3,1};
     String expr = "(("+values[0]+" - 2^"+values[1]+" + "+values[2]+") * -sqrt(3*3+4*4)) / 2";
-    System.out.println(eval(expr));
+    System.out.println(oldeval(expr));
   }
 }

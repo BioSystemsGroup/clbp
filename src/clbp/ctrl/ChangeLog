@@ -1,3 +1,8 @@
+2020-02-03-12:21  glen e. p. ropella  <gepr@tempusdictum.com>
+
+	* Batch.java (constructor): Call initGraal() to initialize the Graal context as a static variable in Eval.
+	(log[ln]): Add a log() without a new line.
+
 2020-01-29-12:29  glen e. p. ropella  <gepr@tempusdictum.com>
 
 	* Batch.java (Batch): Allow output to a different directory hierarchy.

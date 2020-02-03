@@ -1,3 +1,7 @@
+2020-02-03-12:16  glen e. p. ropella  <gepr@tempusdictum.com>
+
+	* run.sh: Explicitly call the GraalVM.
+
 2020-01-29-12:28  glen e. p. ropella  <gepr@tempusdictum.com>
 
 	* run.sh (CLASSPATH): Include Apache Commons IO for directory and file handling.

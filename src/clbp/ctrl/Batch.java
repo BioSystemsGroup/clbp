@@ -9,6 +9,7 @@
  */
 package clbp.ctrl;
 
+import clbp.util.Eval;
 import clbp.view.ObsComps;
 import java.io.FileNotFoundException;
 
@@ -30,6 +31,7 @@ public class Batch {
     java.io.FileInputStream pfis = new java.io.FileInputStream(pf);
     paramString = new java.util.Scanner(pfis).useDelimiter("\\A").next();
     state = new sim.engine.SimState(System.currentTimeMillis());
+    Eval.initGraal();
   }
   public final void load() {
     out_dir_name = setupOutput(expName, out_dir_prefix);
@@ -63,7 +65,7 @@ public class Batch {
   public void go() {
     while (!model.finished || !model.finished)
       state.schedule.step(state);
-    log("Batch.go() - Submodels are finished!");
+    logln("Batch.go() - Submodels are finished!");
   }
   
   public void finish() {
@@ -71,7 +73,8 @@ public class Batch {
   }
 
   private static java.io.PrintWriter log = null;
-  public static void log(String entry) { log.println(entry); log.flush(); }
+  public static void log(String entry) { log.print(entry); log.flush(); }
+  public static void logln(String entry) { log.println(entry); log.flush(); }
   
   static String setupOutput(String en, String odp) {
     final String DATE_FORMAT = "yyyy-MM-dd-HHmmss";
@@ -149,6 +152,7 @@ public class Batch {
     try {
       json = new java.util.Scanner(nextFile).useDelimiter("\\A").next();
     } catch(java.io.FileNotFoundException fnfe) { throw new RuntimeException("Cannot open "+nextFile.getPath(),fnfe); }
+//    logln("Read - "+json);
     Object o = g.deserialize(json, aClass);
     if (o == null) throw new RuntimeException("Problem loading "+aClass.getSimpleName()+".");
     return o;
