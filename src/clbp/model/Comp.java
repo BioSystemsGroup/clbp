@@ -52,17 +52,18 @@ public class Comp implements sim.engine.Steppable {
     });
   }
   private synchronized void writeLHS() {
-    clbp.ctrl.Batch.logln(name+" - Writing");
+//    clbp.ctrl.Batch.logln(name+" - Writing");
     java.util.HashMap<String,Double> writing = new java.util.HashMap<>(lhs.size());
     lhs.forEach((var) -> {
-      writing.put(var,variables.get(var));
+//      writing.put(var,variables.get(var));
       callback.env.variables.replace(var,variables.get(var));
     });
-    clbp.ctrl.Batch.logln(writing.toString());
+//    clbp.ctrl.Batch.logln(writing.toString());
   }
   
   @Override
   public void step(sim.engine.SimState state) {
+    clbp.ctrl.Batch.logln(name+".step()");
     if (this != callback.env) readnonLHS();
     
     for (int andx=0 ; andx<assignments.size() ; andx++) {
@@ -71,12 +72,8 @@ public class Comp implements sim.engine.Steppable {
       for (Map.Entry<String,Double> me : variables.entrySet()) {
         script_bound = script_bound.replaceAll(me.getKey(), me.getValue().toString());
       }
-      clbp.ctrl.Batch.logln("Eval: "+script_bound);
-      double result = Double.NaN;
-//      result = clbp.util.Eval.oldeval(script_bound);
-//        clbp.util.Eval.graal.eval("R", "print('R: Hello World');");
-        Value v = clbp.util.Eval.graal.eval("R", script_bound);
-        result = v.asDouble();
+//      clbp.ctrl.Batch.logln("Eval: "+script_bound);
+      double result = clbp.util.Eval.graal.eval("R", script_bound).asDouble();
       variables.replace(lhskey, result);
     }
     

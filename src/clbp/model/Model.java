@@ -60,7 +60,8 @@ public class Model implements sim.engine.Steppable {
 
   @Override
   public void step(sim.engine.SimState state) {
-    
+    double currentCycle = state.schedule.getTime();
+    clbp.ctrl.Batch.logln("***** Model: cycle = "+currentCycle+", time = "+currentCycle/cyclePerTime+" *****");
     if (state.schedule.getTime() < timeLimit*cyclePerTime )
       state.schedule.scheduleOnce(this, MODEL_ORDER);
     else {

@@ -1,3 +1,8 @@
+2020-02-03-15:51  glen e. p. ropella  <gepr@tempusdictum.com>
+
+	* Model.java (step()): Clean up output. Add a heartbeat.
+	* Comp.java (step()): Clean up Graal FastR eval call.
+
 2020-02-03-12:27  glen e. p. ropella  <gepr@tempusdictum.com>
 
 	* Model.java (instantiate()): Set Comp.callback.
