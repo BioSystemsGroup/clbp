@@ -1,6 +1,7 @@
 {"finished": false,
   "id": 4,
   "name": "PainExperience",
+  "updateRate": 0.5,
   "assignments":["personality = age + bmi^sex","pain_beliefs = personality * smoking"],
   "variables": {
     "age": 64.78399,

@@ -1,6 +1,7 @@
 {"finished": false,
   "id": 0,
   "name": "Environment",
+  "updateRate": 0.25,
   "assignments":["personality = age + bmi^sex","pain_beliefs = personality * smoking"],
   "variables": {
     "age": 40.65498,

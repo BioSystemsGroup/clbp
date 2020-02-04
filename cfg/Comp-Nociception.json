@@ -1,6 +1,7 @@
 {"finished": false,
   "id": 3,
   "name": "Nociception",
+  "updateRate": 0.25,
   "assignments":["personality = age + bmi^sex","pain_beliefs = personality * smoking"],
   "variables": {
     "age": 1.606846,

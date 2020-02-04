@@ -19,6 +19,7 @@ public class Comp implements sim.engine.Steppable {
   public String getName() { return name; }
   public java.util.LinkedHashMap<String, Double> variables = new java.util.LinkedHashMap<>(1);
   public boolean finished = false;
+  public double updateRate = 1.0;
   public ArrayList<String> assignments = new ArrayList<>();
   private ArrayList<String> rhs = new ArrayList<>();
   private ArrayList<String> lhs = new ArrayList<>();
@@ -80,7 +81,7 @@ public class Comp implements sim.engine.Steppable {
     if (this != callback.env) writeLHS();
     
     if (!finished)
-      state.schedule.scheduleOnce(this,clbp.model.Model.SUB_ORDER);
+      state.schedule.scheduleOnceIn(updateRate*callback.cyclePerTime, this,clbp.model.Model.SUB_ORDER);
   }
  
   public static void main(String[] args) throws java.io.FileNotFoundException {

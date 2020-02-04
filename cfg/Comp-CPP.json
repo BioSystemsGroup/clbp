@@ -1,6 +1,7 @@
 {"finished": false,
   "id": 2,
   "name": "CPP",
+  "updateRate": 0.5,
   "assignments":["personality = age + bmi^sex","pain_beliefs = personality * smoking"],
   "variables": {
     "age": 50.01093,
