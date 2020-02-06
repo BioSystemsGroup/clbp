@@ -1,3 +1,7 @@
+2020-02-06-12:46  glen e. p. ropella  <gepr@tempusdictum.com>
+
+	* Comp-*.json: Implement some semblance of reasonable functions based on the Pain Model diagram and some articles. Add some noise to Environment controlled variables.
+
 2020-02-04-09:15  glen e. p. ropella  <gepr@tempusdictum.com>
 
 	* *.json: Add updateRate, in units of model time (simulation time or cycle = model time * cyclesPerTime). Each component reschedules itself with scheduleOnceIn(updateRate*cyclesPerTime, ...).

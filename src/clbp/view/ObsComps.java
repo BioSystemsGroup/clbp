@@ -37,14 +37,11 @@ public class ObsComps extends Obs {
   @Override
   public void writeHeaders() {
     // write the output file headers
-    StringBuilder sb = new StringBuilder("Time");
     if (subject == null) System.err.println("subject == null");
     if (subject.comps == null) System.err.println("subject.comps == null");
     subject.comps.stream().forEach((c) -> {
-      for (Map.Entry<String,Double> me : c.variables.entrySet()) {
-        sb.append(", ").append(me.getKey());
-      }
-      outFiles.get(c).println(sb.toString());
+      String header = c.variables.keySet().stream().reduce((x,y) -> x + ", "+y).get();
+      outFiles.get(c).println("Time, "+header);
     });
   }
   

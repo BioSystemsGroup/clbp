@@ -21,8 +21,8 @@ public class Comp implements sim.engine.Steppable {
   public boolean finished = false;
   public double updateRate = 1.0;
   public ArrayList<String> assignments = new ArrayList<>();
-  private ArrayList<String> rhs = new ArrayList<>();
-  private ArrayList<String> lhs = new ArrayList<>();
+  private ArrayList<String> rhses = new ArrayList<>();
+  private ArrayList<String> lhses = new ArrayList<>();
 
   public Comp() {}
   public Comp(Model m, int ident, double start) {
@@ -39,23 +39,25 @@ public class Comp implements sim.engine.Steppable {
   
   public void parse() {
     for (String a : assignments) {
-      String[] splitted = a.split("=");
-      lhs.add(splitted[0].trim());
-      rhs.add(splitted[1].trim());
+      int lhsindex = a.indexOf('=');
+      String lhs = a.substring(0, lhsindex).trim();
+      String rhs = a.substring(lhsindex+1).trim();
+      lhses.add(lhs);
+      rhses.add(rhs);
     }
-    clbp.ctrl.Batch.logln(name+".LHS = "+lhs.toString());
-    clbp.ctrl.Batch.logln(name+".RHS = "+rhs.toString());
+    clbp.ctrl.Batch.logln(name+".LHS = "+lhses.toString());
+    clbp.ctrl.Batch.logln(name+".RHS = "+rhses.toString());
   }
   private void readnonLHS() {
     variables.keySet().stream().filter((var) 
-            -> (!lhs.contains(var))).forEachOrdered((var) -> {
+            -> (!lhses.contains(var))).forEachOrdered((var) -> {
       variables.replace(var, callback.env.variables.get(var));
     });
   }
   private synchronized void writeLHS() {
 //    clbp.ctrl.Batch.logln(name+" - Writing");
-    java.util.HashMap<String,Double> writing = new java.util.HashMap<>(lhs.size());
-    lhs.forEach((var) -> {
+    java.util.HashMap<String,Double> writing = new java.util.HashMap<>(lhses.size());
+    lhses.forEach((var) -> {
 //      writing.put(var,variables.get(var));
       callback.env.variables.replace(var,variables.get(var));
     });
@@ -68,8 +70,8 @@ public class Comp implements sim.engine.Steppable {
     if (this != callback.env) readnonLHS();
     
     for (int andx=0 ; andx<assignments.size() ; andx++) {
-      String script_bound = rhs.get(andx);
-      String lhskey = lhs.get(andx);
+      String script_bound = rhses.get(andx);
+      String lhskey = lhses.get(andx);
       for (Map.Entry<String,Double> me : variables.entrySet()) {
         script_bound = script_bound.replaceAll(me.getKey(), me.getValue().toString());
       }

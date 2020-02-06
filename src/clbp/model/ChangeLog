@@ -1,3 +1,7 @@
+2020-02-06-12:50  glen e. p. ropella  <gepr@tempusdictum.com>
+
+	* Comp.java (parse()): Parse LH and RH sides based on indices rather than split() to handle "<=" and ">=".
+
 2020-02-04-09:18  glen e. p. ropella  <gepr@tempusdictum.com>
 
 	* Comp.java (updateRate, step()): Add updateRate, in units of model time (simulation time or cycle = model time * cyclesPerTime). Each component reschedules itself with scheduleOnceIn(updateRate*cyclesPerTime, ...).
