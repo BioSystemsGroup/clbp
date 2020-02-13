@@ -82,5 +82,13 @@ The `assignments` in the JSON file specify how each variable is modified in each
 
 The Components are scheduled and executed by MASON in pseud-random order, simulating parallelism. (They can be made parallel if warranted.) This not only leads to the possibility that two executions of the same experiment might result in different outcome, which we mitigate against with a `seed`. But it means if 2 components reference the same variable, what they "see" as input might be different depending on which component executes first. The same is true for outputs.
 
-The assignments written in this prototype are (loosely) based on the Pain Model diagram ...
+The assignments written in this prototype are (loosely) based on the Pain Model diagram. But they are merely placeholders. If this structure is deemed usable by the other project members, then use cases should be developed and these functions should be derived from such. One interesting property of these equations is the "noise" added to the Comp-Environment.JSON assignments:
+```JSON
+    "social_context = ifelse((result <- runif(1,-0.25,0.25) + social_context) <= 0, abs(result), result/2)",
+    "coping_skills = ifelse((result <- runif(1,-0.25,0.25) + coping_skills) <= 0, abs(result), result/2)",
+    "affective_state = ifelse((result <- runif(1,-0.25,0.25) + affective_state) <= 0, abs(result), result/2)"
+```
+The `runif()` function calls are to R's pseudo-random number generator with a uniform distribution from the 2nd parameter to the 3rd. These expressions add a 0.5 width wiggle to whatever value was already there, clipping them if they go below zero. Although these were added in the Environment component, similar uncertainties, with various distributions can be added to any component. Data hiding is not technically possible in the prototype. Therefore uncertainties that might take the form of deterministic mechanisms not observable by other components must be implemented manually. For example, for a variable that is solely modified and used within a single component, the modeler holds responsibility to not write that variable into other component's assignments. But such data hiding is a natural part of event- and agent-based models. And if a *need for hiding flows down from the use cases*, then the framework upon which the prototype is built accommodates it easily.
 
+Because the input to the prototype is merely a collection of pseudo-randomly chosen initial values and the equations are merely guesses at an interpretation of the Pain Model diagram, the output is largely irrelevant. However, just to give an idea of what's happening, below are plots of the `Comp-Environment.csv` columns:
+![Example Plots](https://github.com/BioSystemsGroup/clbp/doc/img/example-plots.png "Example Plots")
