@@ -1,15 +1,18 @@
 # clbp
 Chronic Low-Back Pain project prototype
 
-## Repository Structure
-
+## Prototype Structure
 The components in the prototype are:
 * Environment
 * Central Pain Processing (CPP)
 * Nociception
 * Pain Experience
 * Peripheral Tissue Stimulus (PTS)
+The relationships between the components is dynamically defined by the JSON for each component. A dual-layer blackboard structure is used to handle these relationships. More will be said about that below in the Assignments section below. The initial structure is a coarse approximation to the relationships shown here:
+![Pain Model V1](https://github.com/BioSystemsGroup/clbp/blob/master/doc/pain-model-v1.png "Pain Model V1")
 
+
+## Repository Structure
 The subdirectories of the repository reflect a typical project structure:
 ```
 clbp                  # Parent directory
