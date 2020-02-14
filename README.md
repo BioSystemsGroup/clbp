@@ -1,8 +1,34 @@
 # clbp
 Chronic Low-Back Pain project prototype
 
+## Repository Structure
+
+The components in the prototype are:
+* Environment
+* Central Pain Processing (CPP)
+* Nociception
+* Pain Experience
+* Peripheral Tissue Stimulus (PTS)
+
+The subdirectories of the repository reflect a typical project structure:
+```
+clbp                  # Parent directory
+├── bin                  # Executables like run.sh
+├── cfg                  # JSON files
+├── doc                  # Documentation (not used yet)
+├── lib                  # Prerequisite libraries (e.g. MASON)
+├── nbproject            # Netbeans project files
+├── src                  # Top directory for the Java source code
+│   └── clbp                  # clbp Java package
+│       ├── ctrl                 # Controller package
+│       ├── model                # Model package
+│       ├── util                 # Utilities (e.g. script eval)
+│       └── view                 # Observation and measurement
+```
+
+
 ## Toolchain and Execution Workflow
-The Java calls out to an R interpreter to evaluate the Component functions. The component functions are specified in the JSON file for each component. Here's what they look like:
+The Java calls out to an R interpreter to evaluate the Component functions. The component functions are specified in the JSON file for each component. Here is the JSON for the `Environment` component:
 ```JSON
 {"finished": false,
   "id": 0,
