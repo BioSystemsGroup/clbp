@@ -16,17 +16,17 @@ The relationships between the components is dynamically defined by the JSON for 
 The subdirectories of the repository reflect a typical project structure:
 ```
 clbp                  # Parent directory
-├── bin                  # Executables like run.sh
-├── cfg                  # JSON files
-├── doc                  # Documentation (not used yet)
-├── lib                  # Prerequisite libraries (e.g. MASON)
-├── nbproject            # Netbeans project files
-├── src                  # Top directory for the Java source code
-│   └── clbp                  # clbp Java package
-│       ├── ctrl                 # Controller package
-│       ├── model                # Model package
-│       ├── util                 # Utilities (e.g. script eval)
-│       └── view                 # Observation and measurement
+├── bin               # Executables like run.sh
+├── cfg               # JSON files
+├── doc               # Documentation (not used yet)
+├── lib               # Prerequisite libraries (e.g. MASON)
+├── nbproject         # Netbeans project files
+├── src               # Top directory for the Java source code
+│   └── clbp          # clbp Java package
+│       ├── ctrl      # Controller package
+│       ├── model     # Model package
+│       ├── util      # Utilities (e.g. script eval)
+│       └── view      # Observation and measurement
 ```
 
 
