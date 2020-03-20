@@ -1,0 +1,1553 @@
+{"patients":[
+  {
+    "mrn": "43517d8a730fe506314c4b8d243d92cd", 
+    "visits": {
+      "2020-03-03": {
+        "eq5d_utility": 0.8271093, 
+        "eq5d_vas": 85.0, 
+        "oswestry": 10.0, 
+        "vas_back": 1.0, 
+        "vas_larm": 0.0, 
+        "vas_lleg": 0.0, 
+        "vas_neck": 0.0, 
+        "vas_rarm": 0.0, 
+        "vas_rleg": 0.0
+      },
+      "2020-01-28": {
+        "eq5d_utility": 0.8162879,
+        "eq5d_vas": 80,
+        "oswestry": 31,
+        "vas_back": 4,
+        "vas_lleg": 0,
+        "vas_rleg": 0,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2019-10-01": {
+        "eq5d_utility": 0.39696790000000004,
+        "eq5d_vas": 83,
+        "oswestry": 44,
+        "vas_back": 8,
+        "vas_lleg": 4,
+        "vas_rleg": 3,
+        "vas_neck": 0,
+        "vas_larm": 3,
+        "vas_rarm": 0
+      },
+      "2019-06-11": {
+        "eq5d_utility": 0.5753368999999999,
+        "eq5d_vas": 80,
+        "oswestry": 43,
+        "vas_back": 4,
+        "vas_lleg": 4,
+        "vas_rleg": 0,
+        "vas_neck": 1,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2019-02-12": {
+        "eq5d_utility": 0.8271093,
+        "eq5d_vas": 89,
+        "oswestry": 14,
+        "vas_back": 1,
+        "vas_lleg": 0,
+        "vas_rleg": 0,
+        "vas_neck": 2,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2018-10-09": {
+        "eq5d_utility": 0.8162879,
+        "eq5d_vas": 92,
+        "oswestry": 8,
+        "vas_back": 0,
+        "vas_lleg": 0,
+        "vas_rleg": 0,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2018-08-28": {
+        "eq5d_utility": 0.6257406,
+        "eq5d_vas": 90,
+        "oswestry": 27,
+        "vas_back": 0,
+        "vas_lleg": 0,
+        "vas_rleg": 0,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2018-04-10": {
+        "eq5d_utility": 0.30778629999999996,
+        "eq5d_vas": 97,
+        "oswestry": 38,
+        "vas_back": 4,
+        "vas_lleg": 0,
+        "vas_rleg": 0,
+        "vas_neck": 3,
+        "vas_larm": 4,
+        "vas_rarm": 0
+      },
+      "2018-02-20": {
+        "eq5d_utility": 0.7675993999999999,
+        "eq5d_vas": 81,
+        "oswestry": 30,
+        "vas_back": 2,
+        "vas_lleg": 0,
+        "vas_rleg": 0,
+        "vas_neck": 2,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2018-02-16": {
+        "eq5d_utility": 0.7077443000000001,
+        "eq5d_vas": 80,
+        "oswestry": 30,
+        "vas_back": 2,
+        "vas_lleg": 0,
+        "vas_rleg": 0,
+        "vas_neck": 4,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2017-05-05": {
+        "eq5d_utility": 0.7077443000000001,
+        "eq5d_vas": 80,
+        "oswestry": 34,
+        "vas_back": 6,
+        "vas_lleg": 1,
+        "vas_rleg": 1,
+        "vas_neck": 5,
+        "vas_larm": -1,
+        "vas_rarm": 1
+      },
+      "2016-06-08": {
+        "eq5d_utility": 0.7778064,
+        "eq5d_vas": 85,
+        "oswestry": 22,
+        "vas_back": 4,
+        "vas_lleg": 1,
+        "vas_rleg": 2,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2014-09-19": {
+        "eq5d_utility": 1,
+        "eq5d_vas": 92,
+        "oswestry": -1,
+        "vas_back": 0,
+        "vas_lleg": 0,
+        "vas_rleg": 0,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2014-06-17": {
+        "eq5d_utility": 0.7778064,
+        "eq5d_vas": 81,
+        "oswestry": -1,
+        "vas_back": 5,
+        "vas_lleg": 0,
+        "vas_rleg": 1,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2014-05-06": {
+        "eq5d_utility": 0.7778064,
+        "eq5d_vas": 76,
+        "oswestry": -1,
+        "vas_back": 2,
+        "vas_lleg": 1,
+        "vas_rleg": 0,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2011-06-24": {
+        "eq5d_utility": 0.7778064,
+        "oswestry": -1,
+        "eq5d_vas": 90,
+        "vas_back": -1,
+        "vas_lleg": 4,
+        "vas_rleg": -1,
+        "vas_neck": -1,
+        "vas_larm": -1,
+        "vas_rarm": -1
+      }
+    }
+  },
+  {
+    "mrn": "dadd4e5db94ab4423d53308a598a17f9",
+    "visits": {
+      "2020-02-25": {
+        "eq5d_utility": 0.30778629999999996, 
+        "eq5d_vas": 40.0, 
+        "oswestry": -1.0, 
+        "vas_back": 8.0, 
+        "vas_larm": 7.0, 
+        "vas_lleg": 4.0, 
+        "vas_neck": 8.0, 
+        "vas_rarm": 7.0, 
+        "vas_rleg": 5.0
+      },
+      "2009-05-19": {
+        "eq5d_utility": 0.7077443000000001,
+        "eq5d_vas": 70,
+        "oswestry": -1,
+        "vas_back": -1, 
+        "vas_larm": -1, 
+        "vas_lleg": -1, 
+        "vas_neck": 1, 
+        "vas_rarm": -1, 
+        "vas_rleg": -1
+      },
+      "2009-08-10": {
+        "eq5d_utility": -1,
+        "eq5d_vas": -1,
+        "oswestry": -1,
+        "vas_back": -1,
+        "vas_lleg": -1,
+        "vas_rleg": 0,
+        "vas_neck": 1,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2009-03-31": {
+        "eq5d_utility": -1,
+        "eq5d_vas": -1,
+        "oswestry": -1,
+        "vas_back": 5,
+        "vas_lleg": 2,
+        "vas_rleg": 2,
+        "vas_neck": 4,
+        "vas_larm": 3,
+        "vas_rarm": 3
+      },
+      "2009-03-03": {
+        "eq5d_utility": -1,
+        "eq5d_vas": -1,
+        "oswestry": -1,
+        "vas_back": -1,
+        "vas_lleg": -1,
+        "vas_rleg": -1,
+        "vas_neck": -1,
+        "vas_larm": -1,
+        "vas_rarm": -1
+      },
+      "2009-02-03": {
+        "eq5d_utility": -1,
+        "eq5d_vas": -1,
+        "oswestry": -1,
+        "vas_back": -1,
+        "vas_lleg": -1,
+        "vas_rleg": 6,
+        "vas_neck": 8,
+        "vas_larm": -1,
+        "vas_rarm": -1
+      },
+      "2009-06-05": {
+        "eq5d_utility": -1,
+        "eq5d_vas": -1,
+        "oswestry": -1,
+        "vas_back": 4,
+        "vas_lleg": -1,
+        "vas_rleg": 2,
+        "vas_neck": 5,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2006-11-14": {
+        "eq5d_utility": -1,
+        "eq5d_vas": -1,
+        "oswestry": -1,
+        "vas_back": 6,
+        "vas_lleg": 0,
+        "vas_rleg": 6,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      }
+    }
+  },
+  {
+    "mrn": "7ddb25f8a2237946e530bb812ea55456",
+    "visits": {
+      "2020-02-25": {
+        "eq5d_utility": -0.10907070000000041,
+        "eq5d_vas": 30,
+        "oswestry": 76,
+        "vas_back": 7,
+        "vas_lleg": 3,
+        "vas_rleg": 6,
+        "vas_neck": 4,
+        "vas_larm": 3,
+        "vas_rarm": 4
+      },
+      "2019-12-10": {
+        "eq5d_utility": -0.10907070000000041,
+        "eq5d_vas": 25,
+        "oswestry": 84,
+        "vas_back": 7,
+        "vas_lleg": 7,
+        "vas_rleg": 7,
+        "vas_neck": 4,
+        "vas_larm": 3,
+        "vas_rarm": 3
+      },
+      "2019-11-26": {
+        "eq5d_utility": -1,
+        "eq5d_vas": -1,
+        "oswestry": -1,
+        "vas_back": 10,
+        "vas_lleg": 0,
+        "vas_rleg": 5,
+        "vas_neck": -1,
+        "vas_larm": -1,
+        "vas_rarm": -1
+      },
+      "2019-11-19": {
+        "eq5d_utility": 0.30778629999999996,
+        "eq5d_vas": -1,
+        "oswestry": 70,
+        "vas_back": 6,
+        "vas_lleg": 3,
+        "vas_rleg": 5,
+        "vas_neck": 4,
+        "vas_larm": 3,
+        "vas_rarm": 3
+      },
+      "2019-09-17": {
+        "eq5d_utility": -1,
+        "eq5d_vas": -1,
+        "oswestry": -1,
+        "vas_back": 5,
+        "vas_lleg": 5,
+        "vas_rleg": 6,
+        "vas_neck": 3,
+        "vas_larm": 3,
+        "vas_rarm": 2
+      },
+      "2019-08-06": {
+        "eq5d_utility": -0.0402381000000005,
+        "eq5d_vas": 31,
+        "oswestry": 66,
+        "vas_back": 7,
+        "vas_lleg": 4,
+        "vas_rleg": 5,
+        "vas_neck": 5,
+        "vas_larm": 5,
+        "vas_rarm": 5
+      },
+      "2019-06-27": {
+        "eq5d_utility": 0.30778629999999996,
+        "eq5d_vas": 40,
+        "oswestry": 78,
+        "vas_back": 6,
+        "vas_lleg": 3,
+        "vas_rleg": 6,
+        "vas_neck": 3,
+        "vas_larm": 3,
+        "vas_rarm": 2
+      },
+      "2019-05-28": {
+        "eq5d_utility": 0.43746680000000004,
+        "eq5d_vas": 40,
+        "oswestry": 68,
+        "vas_back": 7,
+        "vas_lleg": 3,
+        "vas_rleg": 7,
+        "vas_neck": 4,
+        "vas_larm": 2,
+        "vas_rarm": 4
+      },
+      "2019-02-12": {
+        "eq5d_utility": 0.30778629999999996,
+        "eq5d_vas": 30,
+        "oswestry": 60,
+        "vas_back": 6,
+        "vas_lleg": 3,
+        "vas_rleg": 4,
+        "vas_neck": 3,
+        "vas_larm": 4,
+        "vas_rarm": 4
+      }
+    }
+  },
+  {
+    "mrn": "5f97ca89290e49ea09e0c107b6d5eb24",
+    "visits": {
+      "2020-02-25": {
+        "eq5d_utility": 0.7778064,
+        "eq5d_vas": 90,
+        "oswestry": 36,
+        "vas_back": 7,
+        "vas_lleg": 1,
+        "vas_rleg": 7,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2020-01-14": {
+        "eq5d_utility": 0.45647779999999993,
+        "eq5d_vas": 90,
+        "oswestry": 33,
+        "vas_back": 9,
+        "vas_lleg": 0,
+        "vas_rleg": 6,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2019-10-25": {
+        "eq5d_utility": 0.45647779999999993,
+        "eq5d_vas": 81,
+        "oswestry": 26,
+        "vas_back": 10,
+        "vas_lleg": 1,
+        "vas_rleg": 9,
+        "vas_neck": 1,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2019-10-11": {
+        "eq5d_utility": 0.44565640000000006,
+        "eq5d_vas": 70,
+        "oswestry": 46,
+        "vas_back": 6,
+        "vas_lleg": 0,
+        "vas_rleg": 8,
+        "vas_neck": 1,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2014-06-10": {
+        "eq5d_utility": 0.8100014,
+        "eq5d_vas": 91,
+        "oswestry": 24,
+        "vas_back": 7,
+        "vas_lleg": 7,
+        "vas_rleg": 3,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2013-03-22": {
+        "eq5d_utility": 0.44565640000000006,
+        "eq5d_vas": 70,
+        "oswestry": 40,
+        "vas_back": 9,
+        "vas_lleg": 9,
+        "vas_rleg": 9,
+        "vas_neck": -1,
+        "vas_larm": -1,
+        "vas_rarm": -1
+      },
+      "2013-02-22": {
+        "eq5d_utility": 0.8100014,
+        "eq5d_vas": 81,
+        "oswestry": 32,
+        "vas_back": 0,
+        "vas_lleg": 4,
+        "vas_rleg": 4,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2012-12-14": {
+        "eq5d_utility": 0.8100014,
+        "eq5d_vas": 91,
+        "oswestry": 8,
+        "vas_back": 5,
+        "vas_lleg": 3,
+        "vas_rleg": 3,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2012-11-28": {
+        "eq5d_utility": -1,
+        "eq5d_vas": -1,
+        "oswestry": -1,
+        "vas_back": -1,
+        "vas_lleg": 4,
+        "vas_rleg": 4,
+        "vas_neck": -1,
+        "vas_larm": -1,
+        "vas_rarm": -1
+      },
+      "2012-10-26": {
+        "eq5d_utility": 0.5753368999999999,
+        "eq5d_vas": 71,
+        "oswestry": 30,
+        "vas_back": 8,
+        "vas_lleg": 7,
+        "vas_rleg": 8,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2012-08-21": {
+        "eq5d_utility": 0.44565640000000006,
+        "eq5d_vas": 71,
+        "oswestry": -1,
+        "vas_back": 7,
+        "vas_lleg": 7,
+        "vas_rleg": 7,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2012-02-17": {
+        "eq5d_utility": 0.8271093,
+        "eq5d_vas": 96,
+        "oswestry": 6,
+        "vas_back": 1,
+        "vas_lleg": 4,
+        "vas_rleg": 1,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2011-08-26": {
+        "eq5d_utility": 0.8271093,
+        "eq5d_vas": 80,
+        "oswestry": -1,
+        "vas_back": 5,
+        "vas_lleg": 2,
+        "vas_rleg": 5,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2011-03-04": {
+        "eq5d_utility": 0.8271093,
+        "eq5d_vas": 93,
+        "oswestry": 24,
+        "vas_back": 0,
+        "vas_lleg": -1,
+        "vas_rleg": 3,
+        "vas_neck": 0,
+        "vas_larm": -1,
+        "vas_rarm": -1
+      },
+      "2011-01-25": {
+        "eq5d_utility": 0.8100014,
+        "eq5d_vas": 81,
+        "oswestry": 4,
+        "vas_back": -1,
+        "vas_lleg": -1,
+        "vas_rleg": 3,
+        "vas_neck": 0,
+        "vas_larm": -1,
+        "vas_rarm": -1
+      },
+      "2010-12-10": {
+        "eq5d_utility": 0.8162879,
+        "eq5d_vas": 90,
+        "oswestry": 20,
+        "vas_back": 5,
+        "vas_lleg": 5,
+        "vas_rleg": 0,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2010-10-29": {
+        "eq5d_utility": 1,
+        "eq5d_vas": 92,
+        "oswestry": 14,
+        "vas_back": 2,
+        "vas_lleg": -1,
+        "vas_rleg": -1,
+        "vas_neck": 2,
+        "vas_larm": -1,
+        "vas_rarm": -1
+      },
+      "2010-07-30": {
+        "eq5d_utility": 0.853984,
+        "eq5d_vas": 81,
+        "oswestry": -1,
+        "vas_back": 0,
+        "vas_lleg": 0,
+        "vas_rleg": 0,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2010-06-18": {
+        "eq5d_utility": 1,
+        "eq5d_vas": 92,
+        "oswestry": -1,
+        "vas_back": 1,
+        "vas_lleg": -1,
+        "vas_rleg": -1,
+        "vas_neck": 1,
+        "vas_larm": -1,
+        "vas_rarm": -1
+      },
+      "2010-03-16": {
+        "eq5d_utility": -1,
+        "eq5d_vas": -1,
+        "oswestry": -1,
+        "vas_back": 7,
+        "vas_lleg": 8,
+        "vas_rleg": 8,
+        "vas_neck": -1,
+        "vas_larm": -1,
+        "vas_rarm": -1
+      },
+      "2010-03-02": {
+        "eq5d_utility": 0.45647779999999993,
+        "eq5d_vas": 81,
+        "oswestry": -1,
+        "vas_back": 9,
+        "vas_lleg": 1,
+        "vas_rleg": 7,
+        "vas_neck": 0,
+        "vas_larm": 1,
+        "vas_rarm": 0
+      },
+      "2010-01-15": {
+        "eq5d_utility": 0.8162879,
+        "eq5d_vas": 82,
+        "oswestry": 27,
+        "vas_back": -1,
+        "vas_lleg": -1,
+        "vas_rleg": -1,
+        "vas_neck": 6,
+        "vas_larm": 6,
+        "vas_rarm": 6
+      },
+      "2009-12-01": {
+        "eq5d_utility": 0.7778064,
+        "eq5d_vas": 83,
+        "oswestry": 46,
+        "vas_back": -1,
+        "vas_lleg": -1,
+        "vas_rleg": -1,
+        "vas_neck": 5,
+        "vas_larm": 4,
+        "vas_rarm": -1
+      },
+      "2009-10-23": {
+        "eq5d_utility": 0.4627643,
+        "eq5d_vas": 79,
+        "oswestry": -1,
+        "vas_back": -1,
+        "vas_lleg": -1,
+        "vas_rleg": -1,
+        "vas_neck": 10,
+        "vas_larm": 9,
+        "vas_rarm": 6
+      },
+      "2009-09-18": {
+        "eq5d_utility": 0.8100014,
+        "eq5d_vas": 70,
+        "oswestry": -1,
+        "vas_back": -1,
+        "vas_lleg": -1,
+        "vas_rleg": -1,
+        "vas_neck": 5,
+        "vas_larm": 5,
+        "vas_rarm": 5
+      }
+    }
+  },
+  {
+    "mrn": "a8d18178692fe9df5504186cdc2d1084",
+    "visits": {
+      "2020-03-06": {
+        "eq5d_utility": 0.7077443000000001,
+        "eq5d_vas": 67,
+        "oswestry": 40,
+        "vas_back": 4,
+        "vas_lleg": 5,
+        "vas_rleg": 0,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2019-09-20": {
+        "eq5d_utility": 0.5971891,
+        "eq5d_vas": 70,
+        "oswestry": 50,
+        "vas_back": 6,
+        "vas_lleg": 2,
+        "vas_rleg": 1,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2019-06-25": {
+        "eq5d_utility": 0.5971891,
+        "eq5d_vas": 72,
+        "oswestry": 47,
+        "vas_back": 5,
+        "vas_lleg": 2,
+        "vas_rleg": 1,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2019-05-14": {
+        "eq5d_utility": 0.43746680000000004,
+        "eq5d_vas": 78,
+        "oswestry": 54,
+        "vas_back": 7,
+        "vas_lleg": 5,
+        "vas_rleg": 2,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2019-03-22": {
+        "eq5d_utility": 0.1670872,
+        "eq5d_vas": 71,
+        "oswestry": 74,
+        "vas_back": 8,
+        "vas_lleg": 9,
+        "vas_rleg": 4,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2018-12-18": {
+        "eq5d_utility": 0.5971891,
+        "eq5d_vas": 76,
+        "oswestry": 54,
+        "vas_back": 7,
+        "vas_lleg": 7,
+        "vas_rleg": 4,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2018-11-20": {
+        "eq5d_utility": 0.30778629999999996,
+        "eq5d_vas": 71,
+        "oswestry": 56,
+        "vas_back": 8,
+        "vas_lleg": 8,
+        "vas_rleg": 1,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2018-10-09": {
+        "eq5d_utility": 0.7077443000000001,
+        "eq5d_vas": 74,
+        "oswestry": 56,
+        "vas_back": 8,
+        "vas_lleg": 8,
+        "vas_rleg": 2,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2018-09-25": {
+        "eq5d_utility": 0.7077443000000001,
+        "eq5d_vas": 80,
+        "oswestry": 36,
+        "vas_back": 4,
+        "vas_lleg": 4,
+        "vas_rleg": 1,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2018-08-21": {
+        "eq5d_utility": -1,
+        "eq5d_vas": -1,
+        "oswestry": -1,
+        "vas_back": 2,
+        "vas_lleg": 2,
+        "vas_rleg": 0,
+        "vas_neck": -1,
+        "vas_larm": -1,
+        "vas_rarm": -1
+      },
+      "2018-07-27": {
+        "eq5d_utility": 0.39696790000000004,
+        "eq5d_vas": 85,
+        "oswestry": 46,
+        "vas_back": 8,
+        "vas_lleg": 8,
+        "vas_rleg": 0,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2018-04-10": {
+        "eq5d_utility": -1,
+        "eq5d_vas": -1,
+        "oswestry": -1,
+        "vas_back": 5,
+        "vas_lleg": 7,
+        "vas_rleg": 1,
+        "vas_neck": -1,
+        "vas_larm": -1,
+        "vas_rarm": -1
+      },
+      "2018-03-27": {
+        "eq5d_utility": 0.7613129000000001,
+        "eq5d_vas": 88,
+        "oswestry": 26,
+        "vas_back": 8,
+        "vas_lleg": 4,
+        "vas_rleg": 1,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2017-09-29": {
+        "eq5d_utility": 0.7778064,
+        "eq5d_vas": 86,
+        "oswestry": 14,
+        "vas_back": 3,
+        "vas_lleg": 3,
+        "vas_rleg": 3,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2017-05-16": {
+        "eq5d_utility": 0.7077443000000001,
+        "eq5d_vas": 87,
+        "oswestry": 26,
+        "vas_back": 4,
+        "vas_lleg": 2,
+        "vas_rleg": 1,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2017-04-28": {
+        "eq5d_utility": 0.7077443000000001,
+        "eq5d_vas": 88,
+        "oswestry": 28,
+        "vas_back": 4,
+        "vas_lleg": 4,
+        "vas_rleg": 2,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2017-01-31": {
+        "eq5d_utility": 0.7778064,
+        "eq5d_vas": 88,
+        "oswestry": 24,
+        "vas_back": 2,
+        "vas_lleg": 3,
+        "vas_rleg": 0,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2016-12-13": {
+        "eq5d_utility": 0.7778064,
+        "eq5d_vas": 86,
+        "oswestry": 28,
+        "vas_back": 4,
+        "vas_lleg": 3,
+        "vas_rleg": 0,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2016-11-15": {
+        "eq5d_utility": 0.7077443000000001,
+        "eq5d_vas": 85,
+        "oswestry": 40,
+        "vas_back": 5,
+        "vas_lleg": 3,
+        "vas_rleg": 0,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2016-10-11": {
+        "eq5d_utility": 0.33085259999999983,
+        "eq5d_vas": 81,
+        "oswestry": 50,
+        "vas_back": 4,
+        "vas_lleg": 6,
+        "vas_rleg": 1,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2016-09-02": {
+        "eq5d_utility": 0.39696790000000004,
+        "eq5d_vas": 80,
+        "oswestry": 44,
+        "vas_back": 7,
+        "vas_lleg": 6,
+        "vas_rleg": 1,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2016-08-16": {
+        "eq5d_utility": 0.39696790000000004,
+        "eq5d_vas": 70,
+        "oswestry": -1,
+        "vas_back": 8,
+        "vas_lleg": 7,
+        "vas_rleg": 2,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      }
+    }
+  },
+  {
+    "mrn": "a653db6089e9dc49c160f0e2913cfe85",
+    "visits": {
+      "2020-03-06": {
+        "eq5d_utility": 0.04938279999999995,
+        "eq5d_vas": 41,
+        "oswestry": 66,
+        "vas_back": 8,
+        "vas_lleg": 7,
+        "vas_rleg": 8,
+        "vas_neck": 3,
+        "vas_larm": 2,
+        "vas_rarm": 2
+      },
+      "2015-04-28": {
+        "eq5d_utility": -1,
+        "eq5d_vas": -1,
+        "oswestry": -1,
+        "vas_back": 6,
+        "vas_lleg": 6,
+        "vas_rleg": 0,
+        "vas_neck": -1,
+        "vas_larm": -1,
+        "vas_rarm": -1
+      },
+      "2014-01-07": {
+        "eq5d_utility": 0.30778629999999996,
+        "eq5d_vas": 91,
+        "oswestry": 72,
+        "vas_back": 9,
+        "vas_lleg": 8,
+        "vas_rleg": 5,
+        "vas_neck": 6,
+        "vas_larm": 8,
+        "vas_rarm": 8
+      },
+      "2013-09-24": {
+        "eq5d_utility": -1,
+        "eq5d_vas": -1,
+        "oswestry": -1,
+        "vas_back": -1,
+        "vas_lleg": -1,
+        "vas_rleg": -1,
+        "vas_neck": 5,
+        "vas_larm": 3,
+        "vas_rarm": 3
+      },
+      "2013-01-25": {
+        "eq5d_utility": 0.39696790000000004,
+        "eq5d_vas": 60,
+        "oswestry": 46,
+        "vas_back": 6,
+        "vas_lleg": 3,
+        "vas_rleg": 3,
+        "vas_neck": 6,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2012-11-02": {
+        "eq5d_utility": 0.7077443000000001,
+        "eq5d_vas": 61,
+        "oswestry": -1,
+        "vas_back": 6,
+        "vas_lleg": 5,
+        "vas_rleg": 5,
+        "vas_neck": 4,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      }
+    }
+  },
+  {
+    "mrn": "7b6ca93f705052f3cb85fec4500241ae",
+    "visits": {
+      "2020-03-03": {
+        "eq5d_utility": -1,
+        "eq5d_vas": -1,
+        "oswestry": -1,
+        "vas_back": 0,
+        "vas_lleg": 0,
+        "vas_rleg": 0,
+        "vas_neck": 4,
+        "vas_larm": 0,
+        "vas_rarm": 3
+      },
+      "2020-01-17": {
+        "eq5d_utility": -1,
+        "eq5d_vas": -1,
+        "oswestry": -1,
+        "vas_back": 6,
+        "vas_lleg": 0,
+        "vas_rleg": 0,
+        "vas_neck": 6,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2019-10-25": {
+        "eq5d_utility": 0.7077443000000001,
+        "eq5d_vas": 75,
+        "oswestry": 46,
+        "vas_back": 6,
+        "vas_lleg": 6,
+        "vas_rleg": 0,
+        "vas_neck": 8,
+        "vas_larm": 5,
+        "vas_rarm": 0
+      },
+      "2017-06-16": {
+        "eq5d_utility": 0.7077443000000001,
+        "eq5d_vas": 75,
+        "oswestry": 10,
+        "vas_back": 0,
+        "vas_lleg": 0,
+        "vas_rleg": 0,
+        "vas_neck": 8,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2016-04-08": {
+        "eq5d_utility": 0.8266690999999999,
+        "eq5d_vas": 70,
+        "oswestry": 20,
+        "vas_back": 1,
+        "vas_lleg": 2,
+        "vas_rleg": 2,
+        "vas_neck": 3,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2016-01-15": {
+        "eq5d_utility": 0.7613129000000001,
+        "eq5d_vas": 70,
+        "oswestry": 24,
+        "vas_back": 3,
+        "vas_lleg": 2,
+        "vas_rleg": 3,
+        "vas_neck": 3,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2015-10-09": {
+        "eq5d_utility": 0.7077443000000001,
+        "eq5d_vas": 81,
+        "oswestry": 22,
+        "vas_back": 2,
+        "vas_lleg": 1,
+        "vas_rleg": 1,
+        "vas_neck": 3,
+        "vas_larm": 1,
+        "vas_rarm": 1
+      },
+      "2015-08-21": {
+        "eq5d_utility": 0.7675993999999999,
+        "eq5d_vas": 75,
+        "oswestry": 20,
+        "vas_back": 3,
+        "vas_lleg": 3,
+        "vas_rleg": 0,
+        "vas_neck": 3,
+        "vas_larm": 0,
+        "vas_rarm": 3
+      },
+      "2015-05-22": {
+        "eq5d_utility": 0.7077443000000001,
+        "eq5d_vas": 71,
+        "oswestry": 26,
+        "vas_back": 9,
+        "vas_lleg": 0,
+        "vas_rleg": 0,
+        "vas_neck": 3,
+        "vas_larm": 0,
+        "vas_rarm": 9
+      },
+      "2014-09-19": {
+        "eq5d_utility": 0.8162879,
+        "eq5d_vas": 80,
+        "oswestry": 16,
+        "vas_back": 2,
+        "vas_lleg": 1,
+        "vas_rleg": 2,
+        "vas_neck": 1,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2014-06-06": {
+        "eq5d_utility": 0.6886248,
+        "eq5d_vas": 80,
+        "oswestry": 24,
+        "vas_back": 2,
+        "vas_lleg": 0,
+        "vas_rleg": 2,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2014-02-28": {
+        "eq5d_utility": 0.5971891,
+        "eq5d_vas": 70,
+        "oswestry": 50,
+        "vas_back": 0,
+        "vas_lleg": 1,
+        "vas_rleg": 8,
+        "vas_neck": 1,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2014-01-14": {
+        "eq5d_utility": 0.39696790000000004,
+        "eq5d_vas": 70,
+        "oswestry": 48,
+        "vas_back": 3,
+        "vas_lleg": 5,
+        "vas_rleg": 7,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2013-09-03": {
+        "eq5d_utility": 0.2714178999999999,
+        "eq5d_vas": 50,
+        "oswestry": -1,
+        "vas_back": 8,
+        "vas_lleg": 0,
+        "vas_rleg": 9,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      }
+    }
+  },
+  {
+    "mrn": "71f2d57052b95196bfaaad368f05a07e",
+    "visits": {
+      "2020-02-25": {
+        "eq5d_utility": 0.8162879,
+        "eq5d_vas": 71,
+        "oswestry": 44,
+        "vas_back": 2,
+        "vas_lleg": 2,
+        "vas_rleg": 7,
+        "vas_neck": 2,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2019-12-06": {
+        "eq5d_utility": -1,
+        "eq5d_vas": -1,
+        "oswestry": -1,
+        "vas_back": 5,
+        "vas_lleg": 5,
+        "vas_rleg": 9,
+        "vas_neck": -1,
+        "vas_larm": -1,
+        "vas_rarm": -1
+      },
+      "2019-11-26": {
+        "eq5d_utility": -1,
+        "eq5d_vas": -1,
+        "oswestry": -1,
+        "vas_back": 3,
+        "vas_lleg": 3,
+        "vas_rleg": 7,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2019-10-04": {
+        "eq5d_utility": 0.7077443000000001,
+        "eq5d_vas": 61,
+        "oswestry": 34,
+        "vas_back": 4,
+        "vas_lleg": 0,
+        "vas_rleg": 3,
+        "vas_neck": 6,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2018-06-05": {
+        "eq5d_utility": 0.8100014,
+        "eq5d_vas": 83,
+        "oswestry": 34,
+        "vas_back": 3,
+        "vas_lleg": 0,
+        "vas_rleg": 2,
+        "vas_neck": 1,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2016-05-16": {
+        "eq5d_utility": 0.7077443000000001,
+        "eq5d_vas": 85,
+        "oswestry": 24,
+        "vas_back": 2,
+        "vas_lleg": 0,
+        "vas_rleg": 4,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2016-03-14": {
+        "eq5d_utility": 0.7778064,
+        "eq5d_vas": 71,
+        "oswestry": 20,
+        "vas_back": 1,
+        "vas_lleg": 1,
+        "vas_rleg": 2,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2015-09-08": {
+        "eq5d_utility": 0.7778064,
+        "eq5d_vas": 81,
+        "oswestry": 36,
+        "vas_back": 3,
+        "vas_lleg": 3,
+        "vas_rleg": 3,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2015-08-18": {
+        "eq5d_utility": 0.7778064,
+        "eq5d_vas": 70,
+        "oswestry": 33,
+        "vas_back": 3,
+        "vas_lleg": 0,
+        "vas_rleg": 0,
+        "vas_neck": 0,
+        "vas_larm": -1,
+        "vas_rarm": 0
+      },
+      "2015-05-26": {
+        "eq5d_utility": 0.7778064,
+        "eq5d_vas": 82,
+        "oswestry": 32,
+        "vas_back": 2,
+        "vas_lleg": 1,
+        "vas_rleg": 3,
+        "vas_neck": 2,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2015-04-14": {
+        "eq5d_utility": 0.7997944,
+        "eq5d_vas": 70,
+        "oswestry": 27,
+        "vas_back": 3,
+        "vas_lleg": 4,
+        "vas_rleg": 3,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2015-01-13": {
+        "eq5d_utility": 0.7077443000000001,
+        "eq5d_vas": 70,
+        "oswestry": 53,
+        "vas_back": 8,
+        "vas_lleg": 0,
+        "vas_rleg": 2,
+        "vas_neck": 1,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2014-11-25": {
+        "eq5d_utility": -1,
+        "eq5d_vas": -1,
+        "oswestry": -1,
+        "vas_back": 7,
+        "vas_lleg": 1,
+        "vas_rleg": 1,
+        "vas_neck": -1,
+        "vas_larm": -1,
+        "vas_rarm": -1
+      },
+      "2014-09-26": {
+        "eq5d_utility": -1,
+        "eq5d_vas": 50,
+        "oswestry": -1,
+        "vas_back": 8,
+        "vas_lleg": 2,
+        "vas_rleg": 8,
+        "vas_neck": 5,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      }
+    }
+  },
+  {
+    "mrn": "35f0dc53051587401612cd26bdc5b1b6",
+    "visits": {
+      "2020-02-28": {
+        "eq5d_utility": 0.04938279999999995,
+        "eq5d_vas": 58,
+        "oswestry": 80,
+        "vas_back": 10,
+        "vas_lleg": 5,
+        "vas_rleg": 10,
+        "vas_neck": 4,
+        "vas_larm": 3,
+        "vas_rarm": 2
+      },
+      "2020-02-07": {
+        "eq5d_utility": 0.04938279999999995,
+        "eq5d_vas": -1,
+        "oswestry": 78,
+        "vas_back": 9,
+        "vas_lleg": 5,
+        "vas_rleg": 8,
+        "vas_neck": 8,
+        "vas_larm": 4,
+        "vas_rarm": 2
+      },
+      "2019-11-05": {
+        "eq5d_utility": 0.2630446000000001,
+        "eq5d_vas": 53,
+        "oswestry": 68,
+        "vas_back": 8,
+        "vas_lleg": 0,
+        "vas_rleg": 6,
+        "vas_neck": 5,
+        "vas_larm": 3,
+        "vas_rarm": 3
+      },
+      "2019-09-10": {
+        "eq5d_utility": 0.5971891,
+        "eq5d_vas": 60,
+        "oswestry": 68,
+        "vas_back": 8,
+        "vas_lleg": 4,
+        "vas_rleg": 6,
+        "vas_neck": 5,
+        "vas_larm": 3,
+        "vas_rarm": 0
+      },
+      "2019-08-30": {
+        "eq5d_utility": 0.5971891,
+        "eq5d_vas": 40,
+        "oswestry": 64,
+        "vas_back": 7,
+        "vas_lleg": 1,
+        "vas_rleg": 4,
+        "vas_neck": 4,
+        "vas_larm": 2,
+        "vas_rarm": 0
+      }
+    }
+  },
+  {
+    "mrn": "8ea4e75a85af8466f15bce1d91c38230",
+    "visits": {
+      "2020-03-03": {
+        "eq5d_utility": 0.6886248,
+        "eq5d_vas": 90,
+        "oswestry": 50,
+        "vas_back": 5,
+        "vas_lleg": 0,
+        "vas_rleg": 0,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2019-11-05": {
+        "eq5d_utility": -1,
+        "eq5d_vas": -1,
+        "oswestry": -1,
+        "vas_back": 1,
+        "vas_lleg": 2,
+        "vas_rleg": 4,
+        "vas_neck": -1,
+        "vas_larm": -1,
+        "vas_rarm": -1
+      },
+      "2019-10-04": {
+        "eq5d_utility": 0.8075496,
+        "eq5d_vas": 80,
+        "oswestry": 20,
+        "vas_back": 4,
+        "vas_lleg": 0,
+        "vas_rleg": 2,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2019-09-06": {
+        "eq5d_utility": -1,
+        "eq5d_vas": -1,
+        "oswestry": 28,
+        "vas_back": 6,
+        "vas_lleg": 6,
+        "vas_rleg": 6,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2019-06-11": {
+        "eq5d_utility": -1,
+        "eq5d_vas": -1,
+        "oswestry": -1,
+        "vas_back": 3,
+        "vas_lleg": 5,
+        "vas_rleg": 5,
+        "vas_neck": -1,
+        "vas_larm": -1,
+        "vas_rarm": -1
+      },
+      "2019-04-16": {
+        "eq5d_utility": -1,
+        "eq5d_vas": -1,
+        "oswestry": -1,
+        "vas_back": 5,
+        "vas_lleg": 0,
+        "vas_rleg": 4,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2018-10-16": {
+        "eq5d_utility": 0.8100014,
+        "eq5d_vas": 80,
+        "oswestry": 46,
+        "vas_back": 3,
+        "vas_lleg": 0,
+        "vas_rleg": 0,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2018-07-17": {
+        "eq5d_utility": 0.7778064,
+        "eq5d_vas": 100,
+        "oswestry": 36,
+        "vas_back": 2,
+        "vas_lleg": 0,
+        "vas_rleg": 0,
+        "vas_neck": 1,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2018-06-05": {
+        "eq5d_utility": 0.8100014,
+        "eq5d_vas": 91,
+        "oswestry": 26,
+        "vas_back": 2,
+        "vas_lleg": 2,
+        "vas_rleg": 0,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2018-03-20": {
+        "eq5d_utility": 0.3117331000000001,
+        "eq5d_vas": 90,
+        "oswestry": 46,
+        "vas_back": 10,
+        "vas_lleg": 5,
+        "vas_rleg": 10,
+        "vas_neck": 2,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2017-09-19": {
+        "eq5d_utility": 0.45647779999999993,
+        "eq5d_vas": 29,
+        "oswestry": -1,
+        "vas_back": 9,
+        "vas_lleg": 0,
+        "vas_rleg": 9,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      }
+    }
+  },
+  {
+    "mrn": "86d4ec3de8c65316e5af3108abdf2294",
+    "visits": {
+      "2020-03-03": {
+        "eq5d_utility": 0.7675993999999999,
+        "eq5d_vas": 83,
+        "oswestry": 40,
+        "vas_back": 2,
+        "vas_lleg": 0,
+        "vas_rleg": 0,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 4
+      },
+      "2019-08-13": {
+        "eq5d_utility": 0.7778064,
+        "eq5d_vas": 83,
+        "oswestry": 28,
+        "vas_back": 4,
+        "vas_lleg": 4,
+        "vas_rleg": 4,
+        "vas_neck": 5,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2019-06-11": {
+        "eq5d_utility": 0.8162879,
+        "eq5d_vas": 81,
+        "oswestry": 22,
+        "vas_back": 3,
+        "vas_lleg": 0,
+        "vas_rleg": 0,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2019-04-16": {
+        "eq5d_utility": 0.7778064,
+        "eq5d_vas": 85,
+        "oswestry": 42,
+        "vas_back": 2,
+        "vas_lleg": 0,
+        "vas_rleg": 0,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      },
+      "2019-01-08": {
+        "eq5d_utility": 0.7675993999999999,
+        "eq5d_vas": 61,
+        "oswestry": -1,
+        "vas_back": 8,
+        "vas_lleg": 3,
+        "vas_rleg": 3,
+        "vas_neck": 0,
+        "vas_larm": -1,
+        "vas_rarm": 0
+      },
+      "2018-11-09": {
+        "eq5d_utility": 0.7675993999999999,
+        "eq5d_vas": 61,
+        "oswestry": -1,
+        "vas_back": 7,
+        "vas_lleg": 2,
+        "vas_rleg": 1,
+        "vas_neck": 0,
+        "vas_larm": 0,
+        "vas_rarm": 0
+      }
+    }
+  }
+]}
