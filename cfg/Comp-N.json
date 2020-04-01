@@ -1,10 +1,10 @@
 {"finished": false,
- "id": 3,
- "name": "CPP",
+ "id": 2,
+ "name": "N",
  "executionTime": -1,
  "updateRate": 0.5,
  "assignments":[
-   "pain_experience = nociception"
+   "nociception = pain_stimulus"
  ],
  "variables": {
    "ps_c": 1,

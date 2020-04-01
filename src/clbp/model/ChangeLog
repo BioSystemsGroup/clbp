@@ -1,3 +1,8 @@
+2020-04-01-15:08  glen e. p. ropella  <gepr@tempusdictum.com>
+
+	* Model.java (Steppable): Identify the "environment" by ID (the 0th component) as opposed to name.
+	* Comp.java (Steppable): Add executionTime IVar for handling single occurance events.
+
 2020-02-06-12:50  glen e. p. ropella  <gepr@tempusdictum.com>
 
 	* Comp.java (parse()): Parse LH and RH sides based on indices rather than split() to handle "<=" and ">=".

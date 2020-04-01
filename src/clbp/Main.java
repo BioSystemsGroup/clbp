@@ -27,17 +27,14 @@ public class Main {
     java.io.File cur_dir = new java.io.File("");
     java.io.File pd = null;
     String pd_name = null;
-    String exp_name = null;
     String pf_name = null;
     java.io.File pf = null;
     if (keyExists("-pd",args)) {
       pd_name = argumentForKey("-pd", args, 0);
       pd = new java.io.File(pd_name);
-      exp_name = pd.getName();
     } else {
       pd = cur_dir;
       pd_name = pd.getAbsolutePath()+java.io.File.separator+"cfg";
-      exp_name = "cfg";
     }
     pf_name = pd_name+java.io.File.separator+"parameters.json";
     pf = new java.io.File(pf_name);
@@ -56,7 +53,7 @@ public class Main {
     
     clbp.ctrl.Batch b = null;
     try {
-      b = new clbp.ctrl.Batch(exp_name, out_dir_name, pf);
+      b = new clbp.ctrl.Batch(pd, out_dir_name, pf);
     } catch (java.io.FileNotFoundException fnfe) {throw new RuntimeException("Couldn't launch Batch.",fnfe); }
     
     if (useGUI) {

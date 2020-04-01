@@ -1,17 +1,18 @@
 {"finished": false,
- "id": 3,
- "name": "CPP",
+ "id": 0,
+ "name": "Context",
  "executionTime": -1,
  "updateRate": 0.5,
  "assignments":[
-   "pain_experience = nociception"
+   "ps_c = ifelse(ps_c-1<=0, 0, ps_c-1)",
+   "ps_w = ifelse(ps_c-1<=0 && ps_w>0, ps_w-1, ps_w)"
  ],
  "variables": {
-   "ps_c": 1,
-   "ps_w": 1,
+   "ps_c": 0,
+   "ps_w": 0,
    "pain_stimulus": -1,
    "nociception": -1,
    "pain_experience": -1,
    "disability": -1
- }
+  }
 }

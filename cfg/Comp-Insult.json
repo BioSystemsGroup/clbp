@@ -1,17 +1,18 @@
 {"finished": false,
- "id": 3,
- "name": "CPP",
- "executionTime": -1,
- "updateRate": 0.5,
+ "id": 5,
+ "name": "Insult",
+ "executionTime": 2,
+ "updateRate": -1,
  "assignments":[
-   "pain_experience = nociception"
+   "ps_c = 10",
+   "ps_w = 2"
  ],
  "variables": {
-   "ps_c": 1,
-   "ps_w": 1,
+   "ps_c": 0,
+   "ps_w": 0,
    "pain_stimulus": -1,
    "nociception": -1,
    "pain_experience": -1,
    "disability": -1
- }
+  }
 }

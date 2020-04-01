@@ -4,7 +4,7 @@
     "seed": 1234567890
   },
   "model": {
-    "timeLimit": 10,
-    "cyclePerTime": 4.0
+    "timeLimit": 8,
+    "cyclePerTime": 2.0
   }
 }

@@ -41,8 +41,8 @@ public class Model implements sim.engine.Steppable {
       else throw new RuntimeException("Object "+o+" is not an instance of Comp");
       comp.parse();
       comp.setCallback(this);
-      // identify the Environment as the Model's blackboard
-      if (comp.name.equalsIgnoreCase("Environment")) env = comp;
+      // identify the 0th component as the Model's blackboard
+      if (comp.id == 0) env = comp;
       tmpComps.add(comp);
     }
     comps = tmpComps;

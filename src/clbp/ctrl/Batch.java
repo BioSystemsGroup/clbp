@@ -17,16 +17,18 @@ public class Batch {
   long seed = -Integer.MAX_VALUE;
   Parameters params = null;
   public sim.engine.SimState state = null;
+  static java.io.File expDir = null;
   public static String expName = "notset";
   private static String out_dir_prefix = null;
   private static String out_dir_name = null;
-  static java.io.File dir = null;
+  static java.io.File outDir = null;
   clbp.model.Model model = null;
   String paramString;
   
-  public Batch(String en, String odp, java.io.File pf) throws FileNotFoundException {
-    if (en != null && !en.equals("")) expName = en;
-    else throw new RuntimeException("Experiment name cannot be null or empty.");
+  public Batch(java.io.File ed, String odp, java.io.File pf) throws FileNotFoundException {
+    if (ed != null && ed.isDirectory()) expDir = ed;
+    else throw new RuntimeException("Experiment directory cannot be null or empty.");
+    expName = ed.getName();
     out_dir_prefix = odp;
     java.io.FileInputStream pfis = new java.io.FileInputStream(pf);
     paramString = new java.util.Scanner(pfis).useDelimiter("\\A").next();
@@ -52,13 +54,19 @@ public class Batch {
     model.init(state, params.model.get("timeLimit").doubleValue(), params.model.get("cyclePerTime").doubleValue());
     model.instantiate();
     // schedule the components
-    model.comps.forEach((c) -> { state.schedule.scheduleOnce(c,clbp.model.Model.MODEL_ORDER); });
+    model.comps.forEach((c) -> { 
+      if (c.updateRate >= 0)
+        state.schedule.scheduleRepeating(c, clbp.model.Model.SUB_ORDER, c.updateRate*model.cyclePerTime);
+      else if (c.executionTime >= 0)
+        state.schedule.scheduleOnce(c.executionTime*model.cyclePerTime, clbp.model.Model.SUB_ORDER, c);
+      else throw new RuntimeException("Error!\n"+c.getName()+".<executionTime,updateRate> = <"+c.executionTime+","+c.updateRate+">");
+    });
     // schedule the model
     state.schedule.scheduleOnce(model,clbp.model.Model.MODEL_ORDER);
         
     // schedule an observer
     ObsComps oc = new ObsComps(expName, p);
-    oc.init(dir, model);
+    oc.init(outDir, model);
     state.schedule.scheduleOnce(oc,clbp.view.Obs.VIEW_ORDER);
   }
   
@@ -85,8 +93,8 @@ public class Batch {
     String dirName = odp+java.io.File.separator+en+"-"+date_s.toString();
 
     // create a directory using the current date and time
-    dir = new java.io.File(dirName);
-    if (!dir.exists()) dir.mkdirs();
+    outDir = new java.io.File(dirName);
+    if (!outDir.exists()) outDir.mkdirs();
     
     // initialize the output for run-time messages
     try {
@@ -140,8 +148,9 @@ public class Batch {
     com.owlike.genson.Genson g = new com.owlike.genson.Genson();
     java.util.Collection<java.io.File> files = null;
     if (!fileMap.containsKey(aClass)) {
-      String in_dir_name = new java.io.File("").getAbsolutePath()+java.io.File.separator+"cfg";
-      files = listFiles(in_dir_name, aClass.getSimpleName()+"-*.json");
+      //String in_dir_name = new java.io.File("").getAbsolutePath()+java.io.File.separator+"cfg";
+      files = listFiles(expDir, aClass.getSimpleName()+"-*.json");
+      for (java.io.File f : files) log.print(f.getName()+"\n");
       fileMap.put(aClass, files);
     } else {
       files = fileMap.get(aClass);
@@ -157,9 +166,9 @@ public class Batch {
     if (o == null) throw new RuntimeException("Problem loading "+aClass.getSimpleName()+".");
     return o;
   }
-  private static java.util.Collection<java.io.File> listFiles(String dir, String pattern) {
-    java.io.File directory = new java.io.File(dir);
-    return org.apache.commons.io.FileUtils.listFiles(directory, 
+  private static java.util.Collection<java.io.File> listFiles(java.io.File dir, String pattern) {
+    //java.io.File directory = new java.io.File(dir);
+    return org.apache.commons.io.FileUtils.listFiles(dir, 
             new org.apache.commons.io.filefilter.WildcardFileFilter(pattern), null); // null = case sensitive
   }
 }

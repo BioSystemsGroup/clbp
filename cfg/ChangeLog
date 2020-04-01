@@ -1,3 +1,7 @@
+2020-04-01-15:04  glen e. p. ropella  <gepr@tempusdictum.com>
+
+	* Comp-*.json: Remove as yet unused variables. Add executionTime IVar to allow for single occurance events. Rename components for convenience.
+
 2020-02-06-12:46  glen e. p. ropella  <gepr@tempusdictum.com>
 
 	* Comp-*.json: Implement some semblance of reasonable functions based on the Pain Model diagram and some articles. Add some noise to Environment controlled variables.
