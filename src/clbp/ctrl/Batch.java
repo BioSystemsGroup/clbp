@@ -47,6 +47,7 @@ public class Batch {
       seed = state.seed();
       params.batch.put("seed",seed);
     }
+    Eval.setSeed(seed);
 
     writeParameters(out_dir_name, params);
 

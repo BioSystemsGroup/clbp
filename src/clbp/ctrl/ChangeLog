@@ -1,3 +1,7 @@
+2020-04-02-10:00  glen e. p. ropella  <gepr@tempusdictum.com>
+
+	* Batch.java (load()): Call Eval.setSeed() to set the R seed to the same as the Mersenne Twister.
+
 2020-04-02-09:31  glen e. p. ropella  <gepr@tempusdictum.com>
 
 	* Batch.java (load()): Rename updateRate to updateInterval.

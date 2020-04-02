@@ -1,3 +1,8 @@
+2020-04-02-10:00  glen e. p. ropella  <gepr@tempusdictum.com>
+
+	* util/Eval.java (setSeed()): Set the R seed to the same as the MASON Mersenne twister.
+	Delete obsolete expression parser.
+
 2020-04-02-09:30  glen e. p. ropella  <gepr@tempusdictum.com>
 
 	* Main.java (Main): Fix default path trick.
