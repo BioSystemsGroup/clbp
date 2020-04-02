@@ -1,3 +1,7 @@
+2020-04-02-09:29  glen e. p. ropella  <gepr@tempusdictum.com>
+
+	* Comp-*.json(updateRate): Fix name to be accurate from rate to interval.
+
 2020-04-01-15:04  glen e. p. ropella  <gepr@tempusdictum.com>
 
 	* Comp-*.json: Remove as yet unused variables. Add executionTime IVar to allow for single occurance events. Rename components for convenience.

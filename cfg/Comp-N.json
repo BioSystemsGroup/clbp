@@ -2,7 +2,7 @@
  "id": 2,
  "name": "N",
  "executionTime": -1,
- "updateRate": 0.5,
+ "updateInterval": 0.5,
  "assignments":[
    "nociception = pain_stimulus"
  ],

@@ -33,8 +33,9 @@ public class Main {
       pd_name = argumentForKey("-pd", args, 0);
       pd = new java.io.File(pd_name);
     } else {
-      pd = cur_dir;
-      pd_name = pd.getAbsolutePath()+java.io.File.separator+"cfg";
+      pd_name = cur_dir.getAbsolutePath()+java.io.File.separator+"cfg";
+      pd = new java.io.File(pd_name);
+      System.out.println("parameter directory = "+pd+", pd_name = "+pd_name);
     }
     pf_name = pd_name+java.io.File.separator+"parameters.json";
     pf = new java.io.File(pf_name);

@@ -2,7 +2,7 @@
  "id": 5,
  "name": "Insult",
  "executionTime": 2,
- "updateRate": -1,
+ "updateInterval": -1,
  "assignments":[
    "ps_c = 10",
    "ps_w = 2"

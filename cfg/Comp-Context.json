@@ -2,7 +2,7 @@
  "id": 0,
  "name": "Context",
  "executionTime": -1,
- "updateRate": 0.5,
+ "updateInterval": 0.5,
  "assignments":[
    "ps_c = ifelse(ps_c-1<=0, 0, ps_c-1)",
    "ps_w = ifelse(ps_c-1<=0 && ps_w>0, ps_w-1, ps_w)"

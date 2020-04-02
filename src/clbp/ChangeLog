@@ -1,3 +1,7 @@
+2020-04-02-09:30  glen e. p. ropella  <gepr@tempusdictum.com>
+
+	* Main.java (Main): Fix default path trick.
+
 2020-01-29-12:29  glen e. p. ropella  <gepr@tempusdictum.com>
 
 	* Main.java (Main): Add parameter "-od" for writing output to a differnt directory.

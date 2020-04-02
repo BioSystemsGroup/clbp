@@ -27,7 +27,7 @@ public class Batch {
   
   public Batch(java.io.File ed, String odp, java.io.File pf) throws FileNotFoundException {
     if (ed != null && ed.isDirectory()) expDir = ed;
-    else throw new RuntimeException("Experiment directory cannot be null or empty.");
+    else throw new RuntimeException("Experiment directory = "+ed);
     expName = ed.getName();
     out_dir_prefix = odp;
     java.io.FileInputStream pfis = new java.io.FileInputStream(pf);
@@ -55,11 +55,11 @@ public class Batch {
     model.instantiate();
     // schedule the components
     model.comps.forEach((c) -> { 
-      if (c.updateRate >= 0)
-        state.schedule.scheduleRepeating(c, clbp.model.Model.SUB_ORDER, c.updateRate*model.cyclePerTime);
+      if (c.updateInterval >= 0)
+        state.schedule.scheduleRepeating(c, clbp.model.Model.SUB_ORDER, c.updateInterval*model.cyclePerTime);
       else if (c.executionTime >= 0)
         state.schedule.scheduleOnce(c.executionTime*model.cyclePerTime, clbp.model.Model.SUB_ORDER, c);
-      else throw new RuntimeException("Error!\n"+c.getName()+".<executionTime,updateRate> = <"+c.executionTime+","+c.updateRate+">");
+      else throw new RuntimeException("Error!\n"+c.getName()+".<executionTime,updateInterval> = <"+c.executionTime+","+c.updateInterval+">");
     });
     // schedule the model
     state.schedule.scheduleOnce(model,clbp.model.Model.MODEL_ORDER);

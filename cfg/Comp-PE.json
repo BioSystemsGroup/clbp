@@ -2,7 +2,7 @@
  "id": 4,
  "name": "PE",
  "executionTime": -1,
- "updateRate": 0.5,
+ "updateInterval": 0.5,
  "assignments":[
    "disability = pain_experience"
  ],
