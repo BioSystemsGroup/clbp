@@ -49,11 +49,8 @@ public class Comp implements sim.engine.Steppable {
     clbp.ctrl.Batch.logln(name+".LHS = "+lhses.toString());
     clbp.ctrl.Batch.logln(name+".RHS = "+rhses.toString());
   }
-  private void readnonLHS() {
-    variables.keySet().stream().filter((var) 
-            -> (!lhses.contains(var))).forEachOrdered((var) -> {
-      variables.replace(var, callback.env.variables.get(var));
-    });
+  private void readAllMyVariables() {
+    variables.keySet().stream().forEach((v) -> {variables.replace(v,callback.env.variables.get(v));});
   }
   private synchronized void writeLHS() {
 //    clbp.ctrl.Batch.logln(name+" - Writing");
@@ -67,8 +64,8 @@ public class Comp implements sim.engine.Steppable {
   
   @Override
   public void step(sim.engine.SimState state) {
-    clbp.ctrl.Batch.logln(name+".step()");
-    if (this != callback.env) readnonLHS();
+//    clbp.ctrl.Batch.logln(name+".step()");
+    if (this != callback.env) readAllMyVariables();
     
     for (int andx=0 ; andx<assignments.size() ; andx++) {
       String script_bound = rhses.get(andx);
