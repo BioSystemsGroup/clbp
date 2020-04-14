@@ -1,3 +1,7 @@
+2020-04-14  glen e. p. ropella  <gepr@tempusdictum.com>
+
+	* [means|ciw]-961-03Apr20.csv: Add ODI, EQ5D, and VAS means and confidence interval data. VAS CI data not included because it has different values for each time, which doesn't fit the format for ODI and EQ5D intervals.
+
 2020-03-20-10:21  glen e. p. ropella  <gepr@tempusdictum.com>
 
 	* valfal.json: Include anonymized validation/falsification data.

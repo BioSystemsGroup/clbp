@@ -1,0 +1,6 @@
+ODI:Robust:CIWidth,3.2
+ODI:Pre-Frail:CIWidth,3.6
+ODI:Frail:CIWidth,4.7
+EQ5D:Robust:CIWidth,5.8
+EQ5D:Pre-Frail:CIWidth,6.6
+EQ5D:Frail:CIWidth,11.5

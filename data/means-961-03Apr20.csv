@@ -1,0 +1,7 @@
+Time,ODI:Robust:Mean,ODI:Pre-Frail:Mean,ODI:Frail:Mean,EQ5D:Robust:Mean,EQ5D:Pre-Frail:Mean,EQ5D:Frail:Mean,VAS:Robust:Mean,VAS:Pre-Frail:Mean,VAS:Frail:Mean
+0,36,49,60,0.6,0.47,0.37,5.6,6,7
+1.5,35,43,51,0.6,0.64,0.63,3.25,3.6,4.4
+3,30,39,51,0.6,0.63,0.67,3,3.6,4.5
+6,26,37,45,0.6,0.64,0.63,2.5,3.4,4.9
+12,35,40,45,0.6,0.62,0.68,3.25,3.6,4
+24,35,40,48,,,,,,
