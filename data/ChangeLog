@@ -1,3 +1,8 @@
+2020-04-17  glen e. p. ropella  <gepr@tempusdictum.com>
+
+	* ciw-961-03Apr20.csv: Delete.
+	* means-961-03Apr20.csv: Fill in the CI widths as time dependent even though only VAS shows time dependence.
+
 2020-04-14  glen e. p. ropella  <gepr@tempusdictum.com>
 
 	* [means|ciw]-961-03Apr20.csv: Add ODI, EQ5D, and VAS means and confidence interval data. VAS CI data not included because it has different values for each time, which doesn't fit the format for ODI and EQ5D intervals.
