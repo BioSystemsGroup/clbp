@@ -1,3 +1,7 @@
+2020-04-17  glen e. p. ropella  <gepr@tempusdictum.com>
+
+	* avgnval.r: Plot script.
+
 2020-02-03-12:16  glen e. p. ropella  <gepr@tempusdictum.com>
 
 	* run.sh: Explicitly call the GraalVM.
