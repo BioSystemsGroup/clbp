@@ -1,0 +1,14 @@
+{"finished": false,
+ "id": 5,
+ "name": "AS",
+ "executionTime": -1,
+ "updateInterval": 0.5,
+ "assignments":[
+   "affective_state = as_coefficient*pe_iterate*runif(1,0,1)"
+ ],
+ "variables": {
+   "affective_state": -1,
+   "as_coefficient": -1,
+   "pe_iterate": -1
+ }
+}

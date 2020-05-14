@@ -74,7 +74,12 @@ public class Comp implements sim.engine.Steppable {
         script_bound = script_bound.replaceAll(me.getKey(), me.getValue().toString());
       }
 //      clbp.ctrl.Batch.logln("Eval: "+script_bound);
-      double result = clbp.util.Eval.graal.eval("R", script_bound).asDouble();
+      double result = Double.NaN;
+      try {
+        result = clbp.util.Eval.graal.eval("R", script_bound).asDouble();
+      } catch (org.graalvm.polyglot.PolyglotException pe) {
+        throw new RuntimeException("Could not parse "+script_bound, pe);
+      }
       variables.replace(lhskey, result);
     }
     

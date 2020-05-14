@@ -28,7 +28,8 @@ for (exp in exps) {
 val <- read.csv("data/means-961-03Apr20.csv")
 valt <- val[,"Time"]+9
 
-png(paste("avgnvalplot-",valtype,".png",sep=''),width=800,height=800)
+##png(paste("avgnvalplot-",valtype,".png",sep=''),width=800,height=800)
+svg(paste("avgnvalplot-",valtype,".svg",sep=''),width=8,height=8)
 par(mar=c(4,4,2,2))
 
 dcols  <- do.call(cbind,dcols)

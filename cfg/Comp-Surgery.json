@@ -1,0 +1,14 @@
+{"finished": false,
+ "id": 8,
+ "name": "Surgery",
+ "executionTime": 10,
+ "updateInterval": -1,
+ "assignments":[
+   "pain_stimulus = pain_stimulus-runif(1,sur_c-sur_w/2,sur_c+sur_w/2)"
+ ],
+ "variables": {
+   "pain_stimulus": -1,
+   "sur_c": -1,
+   "sur_w": -1
+  }
+}

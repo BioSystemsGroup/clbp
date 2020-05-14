@@ -2,17 +2,21 @@
  "id": 0,
  "name": "Context",
  "executionTime": -1,
- "updateInterval": 0.5,
- "assignments":[
-   "ps_c = ifelse(ps_c-1<=0, 0, ps_c-1)",
-   "ps_w = ifelse(ps_c-1<=0 && ps_w>0, ps_w-1, ps_w)"
- ],
+ "updateInterval": 1,
  "variables": {
-   "ps_c": 0,
-   "ps_w": 0,
-   "pain_stimulus": -1,
+   "n_coefficient": 1.0,
+   "cpp_coefficient": 1.0,
+   "as_coefficient": 1.0,
+   "cpp": -1,
+   "dmg_c": 16,
+   "dmg_w": 1,
+   "sur_c": 5,
+   "sur_w": 1,
+   "pe_iterate": -1,
    "nociception": -1,
+   "pain_stimulus": -1,
    "pain_experience": -1,
+   "affective_state": -1,
    "disability": -1
   }
 }

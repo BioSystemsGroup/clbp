@@ -8,7 +8,7 @@
 ##
 
 CLASSPATH=$CLASSPATH:./build/classes
-CLASSPATH=$CLASSPATH:./lib/genson-1.3.jar
+CLASSPATH=$CLASSPATH:./lib/genson-1.6.jar
 CLASSPATH=$CLASSPATH:./lib/logback-classic-0.9.28.jar
 CLASSPATH=$CLASSPATH:./lib/logback-core-0.9.28.jar
 #CLASSPATH=$CLASSPATH:./lib/mason-18-with-src.jar

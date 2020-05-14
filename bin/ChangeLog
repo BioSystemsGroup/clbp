@@ -1,3 +1,7 @@
+2020-05-14  glen e. p. ropella  <gepr@tempusdictum.com>
+
+	* run.sh: Upgrade Genson from 1.3 to 1.6.
+
 2020-04-17  glen e. p. ropella  <gepr@tempusdictum.com>
 
 	* avgnval.r: Plot script.

@@ -1,0 +1,14 @@
+{"finished": false,
+ "id": 6,
+ "name": "D",
+ "executionTime": -1,
+ "updateInterval": 0.5,
+ "assignments":[
+   "disability = affective_state*pain_experience"
+ ],
+ "variables": {
+   "pain_experience": -1,
+   "affective_state": 1,
+   "disability": -1
+ }
+}

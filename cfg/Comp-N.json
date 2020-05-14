@@ -4,14 +4,12 @@
  "executionTime": -1,
  "updateInterval": 0.5,
  "assignments":[
-   "nociception = pain_stimulus"
+   "nociception = n_coefficient*pain_stimulus*affective_state*runif(1,0,1)"
  ],
  "variables": {
-   "ps_c": 1,
-   "ps_w": 1,
+   "n_coefficient": -1,
+   "affective_state": -1,
    "pain_stimulus": -1,
-   "nociception": -1,
-   "pain_experience": -1,
-   "disability": -1
+   "nociception": -1
  }
 }

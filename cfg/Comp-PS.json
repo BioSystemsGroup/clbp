@@ -4,14 +4,9 @@
  "executionTime": -1,
  "updateInterval": 0.5,
  "assignments":[
-   "pain_stimulus = ifelse(ps_c == 0 && ps_w == 0, 0, runif(1, ps_c - ps_w/2, ps_c + ps_w/2))"
+   "pain_stimulus = pain_stimulus"
  ],
  "variables": {
-   "ps_c": 0,
-   "ps_w": 0,
-   "pain_stimulus": -1,
-   "nociception": -1,
-   "pain_experience": -1,
-   "disability": -1
+   "pain_stimulus": -1
  }
 }

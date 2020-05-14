@@ -133,7 +133,9 @@ public class Batch {
   }
   public static String describe(Object o) {
     com.owlike.genson.Genson g = new com.owlike.genson.Genson();
-    String json = g.serialize(o);
+    String json = null;
+    try { json = g.serialize(o); }
+    catch (com.owlike.genson.JsonBindingException jbe) { throw new RuntimeException("Failed to serialize "+((clbp.model.Comp)o).getName(), jbe);}
     return json;
   }
   
@@ -163,7 +165,12 @@ public class Batch {
       json = new java.util.Scanner(nextFile).useDelimiter("\\A").next();
     } catch(java.io.FileNotFoundException fnfe) { throw new RuntimeException("Cannot open "+nextFile.getPath(),fnfe); }
 //    logln("Read - "+json);
-    Object o = g.deserialize(json, aClass);
+    Object o = null;
+    try {
+      o = g.deserialize(json, aClass);
+    } catch( com.owlike.genson.JsonBindingException jbe) {
+      throw new RuntimeException("Could not parse the following JSON:\n"+json,jbe);
+    }
     if (o == null) throw new RuntimeException("Problem loading "+aClass.getSimpleName()+".");
     return o;
   }

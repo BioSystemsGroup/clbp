@@ -4,15 +4,14 @@
  "executionTime": -1,
  "updateInterval": 0.5,
  "assignments":[
-   "disability = pain_experience"
+   "pe_iterate = pain_experience+pe_iterate",
+   "pain_experience = cpp*nociception"
  ],
  "variables": {
-   "ps_c": 0,
-   "ps_w": 0,
-   "pain_stimulus": -1,
+   "cpp": -1,
    "nociception": -1,
-   "pain_experience": -1,
-   "disability": -1
+   "pe_iterate": -1,
+   "pain_experience": -1
  }
 }
 
