@@ -1,3 +1,7 @@
+2020-06-09  glen e. p. ropella  <gepr@tempusdictum.com>
+
+	* Comp-*.json: Commit the em1f to the repository for posterity.
+
 2020-04-02-09:29  glen e. p. ropella  <gepr@tempusdictum.com>
 
 	* Comp-*.json(updateRate): Fix name to be accurate from rate to interval.

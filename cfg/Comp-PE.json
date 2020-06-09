@@ -4,13 +4,14 @@
  "executionTime": -1,
  "updateInterval": 0.5,
  "assignments":[
-   "pe_iterate = pain_experience+pe_iterate",
-   "pain_experience = cpp*nociception"
+   "pe_iterate = pain_experience+pei_coeff*pe_iterate",
+   "pain_experience = cpp+nociception"
  ],
  "variables": {
    "cpp": -1,
    "nociception": -1,
    "pe_iterate": -1,
+   "pei_coeff": -1,
    "pain_experience": -1
  }
 }

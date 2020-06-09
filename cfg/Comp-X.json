@@ -1,0 +1,12 @@
+{"finished": false,
+ "id": 9,
+ "name": "X",
+ "executionTime": 15,
+ "updateInterval": -1,
+ "assignments":[
+   "pei_coeff=0.15"
+ ],
+ "variables": {
+   "pei_coeff": -1
+  }
+}

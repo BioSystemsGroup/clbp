@@ -4,10 +4,10 @@
  "executionTime": -1,
  "updateInterval": 0.5,
  "assignments":[
-   "cpp = cpp_coefficient*pe_iterate"
+   "cpp = cpp_coeff*pe_iterate"
  ],
  "variables": {
-   "cpp_coefficient": -1,
+   "cpp_coeff": -1,
    "cpp": -1,
    "pe_iterate": -1
  }

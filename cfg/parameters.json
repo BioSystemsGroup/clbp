@@ -1,10 +1,9 @@
 {
   "version": "",
   "batch": {
-    "seed": 1234567890
   },
   "model": {
-    "timeLimit": 8,
-    "cyclePerTime": 2.0
+    "timeLimit": 30,
+    "cyclePerTime": 2
   }
 }

@@ -28,15 +28,16 @@ for (exp in exps) {
 val <- read.csv("data/means-961-03Apr20.csv")
 valt <- val[,"Time"]+9
 
-##png(paste("avgnvalplot-",valtype,".png",sep=''),width=800,height=800)
+##png(paste("avgnvalplot-",valtype,".png",sep=''),width=600,height=600)
 svg(paste("avgnvalplot-",valtype,".svg",sep=''),width=8,height=8)
 par(mar=c(4,4,2,2))
 
 dcols  <- do.call(cbind,dcols)
 dcolmean <- rowMeans(dcols)
+dcolmads <- matrixStats::rowMads(dcols)
 tcol <- dat[[1]][,"Time"]
-averaged <- cbind(tcol,dcolmean)
-colnames(averaged) <- c("Time","μ")
+averaged <- cbind(tcol,dcolmean,dcolmads)
+colnames(averaged) <- c("Time","μ","ν")
 
 ylim.lower  <- Inf
 ylim.upper  <- -Inf
@@ -52,10 +53,12 @@ plot(averaged[,"Time"],averaged[,"μ"],
      type="o",
      col=1,
      ylim=c(ylim.lower,ylim.upper))
+##lines(averaged[,"Time"],averaged[,"μ"]+averaged[,"ν"],lty=2)
+##lines(averaged[,"Time"],averaged[,"μ"]-averaged[,"ν"],lty=2)
 lines(valt,val[,valmean],col=2)
 points(valt,val[,valmean],col=2)
 arrows(valt, val[,valmean]-val[,valciw]*val[,valmean], valt, val[,valmean]+val[,valciw]*val[,valmean], length=0.05, angle=90, code=3)
 
-legend("bottomright",legend=c("experimental","validation"),col=1:length(dat),lty=1)
+legend("bottomright",legend=c("experimental","validation"),col=1:2,lty=1)
 grid()
 

@@ -27,7 +27,7 @@ public class Parameters {
   public static Parameters readOneOfYou(String json) {
     com.owlike.genson.Genson g = new com.owlike.genson.Genson();
     Parameters p = g.deserialize(json, Parameters.class);
-    if (p == null || !p.test()) System.out.println("Parameter file has missing values.");
+    if (p == null || !p.test()) clbp.ctrl.Batch.logln("Parameter file has missing values.");
     return p;
   }
   private boolean test(String name, Map<String,Number> ref, Map<String,Number> map) {
