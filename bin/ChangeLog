@@ -1,3 +1,10 @@
+2020-07-01  glen e. p. ropella  <gepr@tempusdictum.com>
+
+	* run.sh: Lower the priority of the process.
+
+	* avgnval.r (cap): Add command line parameter sanitizing so we can use "PRE-FRAIL", "Pre-Frail", or "pre-frail".
+	Add reference data type [odi|eq5d|vas].
+
 2020-06-09  glen e. p. ropella  <gepr@tempusdictum.com>
 
 	* avgnval.r: Fixed colors in legend. Added some stats in anticipation of different similarity measures.

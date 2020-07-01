@@ -3,19 +3,29 @@
 column  <- "disability"
 argv <- commandArgs(TRUE)
 
+capvaltype <- function(s) {
+  cap <- function(s) paste(toupper(substring(s, 1, 1)),
+  {s <- substring(s, 2); tolower(s)},
+    sep = "", collapse = "-")
+  sapply(strsplit(s, split = "-"), cap, USE.NAMES = !is.null(names(s)))
+}
+
 usage <- function() {
-  print("Usage: avgnval.r [Robust|Frail|Pre-Frail] <exp CSV files>")
+  print("Usage: avgnval.r [odi|eq5d|vas] [robust|frail|pre-frail] <exp CSV files>")
   quit()
 }
 
-valtype <- argv[1]
-if (valtype != "Robust" && valtype != "Frail" && valtype != "Pre-Frail") usage();
+datset <- toupper(argv[1])
+if (is.na(match(datset,c("ODI","EQ5D","VAS")))) usage()
+
+valtype <- capvaltype(argv[2])
+if (is.na(match(valtype,c("Robust","Frail","Pre-Frail")))) usage()
 
 valtypemn <- make.names(valtype)
-valmean <- paste("ODI",valtypemn,"Mean",sep='.')
-valciw <- paste("ODI",valtypemn,"CIW",sep='.')
+valmean <- paste(datset,valtypemn,"Mean",sep='.')
+valciw <- paste(datset,valtypemn,"CIW",sep='.')
 
-exps  <- argv[-1]
+exps  <- argv[-(1:2)]
 dat  <- vector("list")
 ndx  <- 1
 dcols <- list()
@@ -28,8 +38,8 @@ for (exp in exps) {
 val <- read.csv("data/means-961-03Apr20.csv")
 valt <- val[,"Time"]+9
 
-##png(paste("avgnvalplot-",valtype,".png",sep=''),width=600,height=600)
-svg(paste("avgnvalplot-",valtype,".svg",sep=''),width=8,height=8)
+png(paste("avgnvalplot-",valtype,".png",sep=''),width=600,height=300)
+##svg(paste("avgnvalplot-",datset,"-",valtype,".svg",sep=''),width=8,height=8)
 par(mar=c(4,4,2,2))
 
 dcols  <- do.call(cbind,dcols)
@@ -42,8 +52,8 @@ colnames(averaged) <- c("Time","μ","ν")
 ylim.lower  <- Inf
 ylim.upper  <- -Inf
 for (ndx in 1:length(dat)) {
-  ylim.lower  <- min(ylim.lower, averaged[,"μ"], val[,valmean]-val[,valciw]*val[,valmean])
-  ylim.upper  <- max(ylim.upper, averaged[,"μ"], val[,valmean]+val[,valciw]*val[,valmean])
+  ylim.lower  <- min(ylim.lower, averaged[,"μ"], val[,valmean]-val[,valciw]*val[,valmean], na.rm=T)
+  ylim.upper  <- max(ylim.upper, averaged[,"μ"], val[,valmean]+val[,valciw]*val[,valmean], na.rm=T)
 }
 
 plot(averaged[,"Time"],averaged[,"μ"],
@@ -59,6 +69,6 @@ lines(valt,val[,valmean],col=2)
 points(valt,val[,valmean],col=2)
 arrows(valt, val[,valmean]-val[,valciw]*val[,valmean], valt, val[,valmean]+val[,valciw]*val[,valmean], length=0.05, angle=90, code=3)
 
-legend("bottomright",legend=c("experimental","validation"),col=1:2,lty=1)
+legend("bottomright",legend=c("experimental",datset),col=1:2,lty=1)
 grid()
 

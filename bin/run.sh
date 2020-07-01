@@ -5,7 +5,7 @@
 # Used to execute the clbp.  E.g.
 # nohup ./bin/run.sh > keep-nohup.out 2>&1 &
 #
-# Time-stamp: <2020-06-01 14:01:08 gepr>
+# Time-stamp: <2020-06-26 12:02:58 gepr>
 ##
 
 CLASSPATH=$CLASSPATH:./build/classes
@@ -19,7 +19,7 @@ CLASSPATH=$CLASSPATH:./lib/commons-io-2.6.jar
 export CLASSPATH
 
 #time java -Duser.language=US -Duser.country=US clbp.Main $*
-#time /usr/local/graalvm-ce-java11-19.3.1/bin/java clbp.Main $*
-/usr/local/graalvm-ce-java11-19.3.1/bin/java clbp.Main $*
+#time /usr/local/graalvm-ce-java11-20.1.0/bin/java clbp.Main $*
+nice -19 /usr/local/graalvm-ce-java11-20.1.0/bin/java clbp.Main $*
 exit 0
 

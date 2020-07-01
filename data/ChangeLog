@@ -1,3 +1,7 @@
+2020-07-01  glen e. p. ropella  <gepr@tempusdictum.com>
+
+	* means-961-03Apr20.csv: Fix VAS confidence intervals.
+
 2020-06-18  glen e. p. ropella  <gepr@tempusdictum.com>
 
 	* means-961-03Apr20.gnumeric: Includes algebraic scaling of ODI data to EQ5D and VAS.
